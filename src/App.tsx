@@ -1,12 +1,10 @@
 import './App.css';
+import { Header } from "./components/header"
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>Lintu ja Maslo</h1>
-        <p><i>Elokuussa 2022</i></p>
-      </header>
+      <Header />
     </div>
   );
 }
