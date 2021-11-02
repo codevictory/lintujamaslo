@@ -1,6 +1,6 @@
 import './App.css';
 import { Header } from "./components/header";
-import { Registration } from './components/registration';
+import { RegForm } from './components/regForm';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 export default function App() {
@@ -12,7 +12,7 @@ export default function App() {
             <Header />
           </div>
         </Route>
-        <Route path="/registration/:id" component={Registration} />
+        <Route path="/registration/:id" component={RegForm} />
       </Switch>
     </Router>
   );
