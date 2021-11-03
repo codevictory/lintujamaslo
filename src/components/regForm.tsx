@@ -4,12 +4,10 @@ import { MinusCircleOutlined, PlusOutlined } from '@ant-design/icons';
 
 import "./../styles/registration.css"
 import { addVisitor } from '../api';
-import { capFirstLetter } from './utils';
+import { arrayToString, capFirstLetter } from './utils';
 import { Visitor } from '../model/visitor';
 
 const { Option } = Select;
-
-const { TextArea } = Input;
 
 interface ParamTypes {
     id: string;
@@ -34,8 +32,8 @@ export const RegForm = () => {
         values.visitors.map(visitor => {
             addVisitor({
                 ...visitor,
-                allergies: visitor.allergies ? visitor.allergies.toString() : "",
-                services: visitor.services ? visitor.services.toString() : "",
+                allergies: visitor.allergies ? arrayToString(visitor.allergies) : "",
+                services: visitor.services ? arrayToString(visitor.services) : "",
                 preferences: visitor.preferences ?? "",
                 invitationId: visitor.invitationId = atob(id),
             });
