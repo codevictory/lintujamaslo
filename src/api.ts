@@ -23,4 +23,6 @@ export const addVisitor = async (visitor: Visitor) => {
     services: visitor.services,
     preferences: visitor.preferences
   });
+
+  await setDoc(doc(db, "submitted", visitor.invitationId), {})
 }
