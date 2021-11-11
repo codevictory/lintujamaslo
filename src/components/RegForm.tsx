@@ -1,8 +1,8 @@
-import { Button, Checkbox, Col, Form, Input, Row, Select, Space } from 'antd';
+import { Button, Checkbox, Col, Form, Input, Row, Select } from 'antd';
 import { useParams } from 'react-router';
 import { MinusCircleOutlined, PlusOutlined } from '@ant-design/icons';
 
-import "./../styles/registration.css"
+import "./styles/regForm.css";
 import { addVisitor } from '../api';
 import { arrayToString, capFirstLetter } from './utils';
 import { Visitor } from '../model/visitor';
@@ -49,7 +49,7 @@ export const RegForm = () => {
                     <>
                         {
                             fields.map(field => (
-                                <div className="visitorContainer" key={field.key}>
+                                <div className="visitors" key={field.key}>
                                     <div className="nameBar">
                                         <Form.Item
                                             label="Name"

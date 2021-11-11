@@ -3,3 +3,8 @@
 .App {
   text-align: center;
 }
+
+.App .App-content {
+  display: flex;
+  justify-content: center;
+}

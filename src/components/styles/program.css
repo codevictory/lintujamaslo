@@ -1,0 +1,21 @@
+table {
+  width: 100%;
+}
+
+table,
+td,
+th {
+  border-bottom: 1px solid black;
+}
+
+th {
+  height: 10vh;
+}
+
+tr {
+  line-break: auto;
+}
+th,
+td {
+  width: 33%;
+}
