@@ -1,4 +1,4 @@
-import "./styles/sideNav.css";
+import "./styles/sideNav.scss";
 import { Link } from 'react-router-dom';
 
 export const SideNav = () => {

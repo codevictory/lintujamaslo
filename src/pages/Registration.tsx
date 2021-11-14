@@ -1,4 +1,4 @@
-import "./styles/registration.css";
+import "./styles/registration.scss";
 
 import { Header } from '../components/Header'
 import { RegForm } from '../components/RegForm'
