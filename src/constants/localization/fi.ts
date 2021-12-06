@@ -1,7 +1,9 @@
 import { common } from "./common/fi";
+import { registration } from './registration/en';
 
 const fi: Record<string, string> = {
-    ...common
+    ...common,
+    ...registration
 }
 
 export default fi;
