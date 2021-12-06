@@ -1,57 +1,40 @@
 import { Link } from 'react-router-dom';
-import "./styles/program.scss";
+import './styles/program.scss';
 
 export const Program = () => {
     return (
-        <article>
+        <section>
             <h1>Program</h1>
-            <table>
-                <tr>
-                    <th></th>
-                    <th>12:00</th>
-                    <th></th>
-                </tr>
-                <tr>
-                    <td>Speech</td>
-                    <td>Boring BS. Lorem ipsum dolor sit amet.</td>
-                    <td>Veikko</td>
-                </tr>
-                <tr>
-                    <td>Lunch</td>
-                    <td>Eating yummy yum.</td>
-                    <td><Link to="/menu" >To menu</Link></td>
-                </tr>
-                <tr>
-                    <th></th>
-                    <th>14:00</th>
-                    <th></th>
-                </tr>
-                <tr>
-                    <td>Games</td>
-                    <td>Activity lol.</td>
-                    <td>Be active.</td>
-                </tr>
-                <tr>
-                    <td>More something</td>
-                    <td>Lorem ipsum dolor sit amet.</td>
-                    <td>More more more</td>
-                </tr>
-                <tr>
-                    <th></th>
-                    <th>23:00</th>
-                    <th></th>
-                </tr>
-                <tr>
-                    <td>More something</td>
-                    <td>Lorem ipsum dolor sit amet.</td>
-                    <td>More more more</td>
-                </tr>
-                <tr>
-                    <td>More something</td>
-                    <td>Lorem ipsum dolor sit amet.</td>
-                    <td>More more more</td>
-                </tr>
-            </table>
-        </article>
-    )
-}
+            <article>
+                <h2>12:00</h2>
+                <h3>Speech</h3>
+                <p>Boring BS. Lorem ipsum dolor sit amet.</p>
+                <h3>Lunch</h3>
+                <p>
+                    Eating yummy yum.
+                    <i>
+                        <Link to='/menu'>To menu</Link>
+                    </i>
+                </p>
+            </article>
+            <article>
+                <h2>14:00</h2>
+                <h3>Games</h3>
+                <p>Activity lol.</p>
+                <p>Be active.</p>
+                <h3>More something</h3>
+                <p>Lorem ipsum dolor sit amet.</p>
+                <h3>More more more</h3>
+            </article>
+            <article>
+                <h2>23:00</h2>
+                <h3>More something</h3>
+                <p>Lorem ipsum dolor sit amet.</p>
+                <h3>More more more</h3>
+                <h3>More something</h3>
+                <p>Lorem ipsum dolor sit amet.</p>
+                <h3>More more more</h3>
+            </article>
+        </section>
+    );
+};
