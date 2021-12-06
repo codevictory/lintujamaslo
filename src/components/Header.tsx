@@ -7,9 +7,6 @@ export const Header = () => {
         <header className="App-header">
             <h1><FormattedMessage id="common.title" /></h1>
             <p><i><FormattedMessage id="common.subtitle" /></i></p>
-            <div className="LanguagePicker-container">
-                <LanguagePicker />
-            </div>
         </header>
     )
 }

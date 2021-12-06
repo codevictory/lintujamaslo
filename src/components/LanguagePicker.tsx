@@ -1,4 +1,5 @@
 import DownOutlined from '@ant-design/icons/lib/icons/DownOutlined';
+import GlobalOutlined from '@ant-design/icons/lib/icons/GlobalOutlined';
 import { Dropdown, Menu } from 'antd';
 import { useRecoilState } from 'recoil';
 import { currentLanguage } from '../atoms/language';
@@ -18,7 +19,7 @@ export const LanguagePicker = () => {
 
     return (
         <Dropdown overlay={menu} trigger={["click"]}>
-            <span className="dropdown">{lang} <DownOutlined /></span>
+            <span className="dropdown"><GlobalOutlined /> <DownOutlined /></span>
         </Dropdown>
     )
 }

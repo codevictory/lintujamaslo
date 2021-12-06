@@ -2,8 +2,7 @@ import "./styles/main.scss";
 
 import { useParams } from "react-router-dom";
 import { Menu } from '../components/Menu';
-import { Header } from '../components/Header';
-import { SideNav } from '../components/SideNav';
+import { NavBar } from '../components/NavBar';
 import { Program } from '../components/Program';
 import { NotFound } from '../components/NotFound';
 
@@ -15,13 +14,9 @@ export const Main = () => {
     const { page } = useParams<MainParams>()
 
     return (
-        <>
-            <Header />
-            <section className="App-content">
-                <SideNav />
-                {page === "menu" ? <Menu /> : page === "program" ? <Program /> : <NotFound />}
-                <div style={{ width: 333 }} />
-            </section>
-        </>
+        <section className="Main">
+            <NavBar />
+            {page === "menu" ? <Menu /> : page === "program" ? <Program /> : <NotFound />}
+        </section>
     )
 }
