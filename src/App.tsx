@@ -6,11 +6,21 @@ import { Main } from './pages/Main';
 import { Registration } from './pages/Registration';
 import { IntlProvider } from 'react-intl';
 import { localization } from './constants/localization';
+import { Header } from './components/Header';
+import { ConfigProvider } from 'antd';
 
 export default function App() {
   const language = useRecoilValue(currentLanguage)
+
+  ConfigProvider.config({
+    theme: {
+      primaryColor: '#21b635',
+    }
+  });
+
   return (
     <IntlProvider locale={language} messages={localization[language]}>
+      <Header />
       <Router>
         <Switch>
           <Route exact path="/:page">
