@@ -4,7 +4,7 @@ import { Dropdown, Menu } from 'antd';
 import { useRecoilState } from 'recoil';
 import { currentLanguage } from '../atoms/language';
 import { languageItems } from '../constants/languageItems';
-import "./styles/languagePicker.scss"
+import "./LanguagePicker.scss"
 
 export const LanguagePicker = () => {
     const [lang, setLang] = useRecoilState(currentLanguage)

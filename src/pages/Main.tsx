@@ -1,4 +1,4 @@
-import "./styles/main.scss";
+import "./Main.scss";
 
 import { useParams } from "react-router-dom";
 import { Menu } from '../components/Menu';

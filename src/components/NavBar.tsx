@@ -1,4 +1,4 @@
-import "./styles/navBar.scss";
+import "./NavBar.scss";
 import { Link } from 'react-router-dom';
 import { LanguagePicker } from './LanguagePicker';
 import { Button, Menu } from 'antd';

@@ -1,6 +1,5 @@
 import { FormattedMessage } from 'react-intl';
-import { LanguagePicker } from './LanguagePicker';
-import "./styles/header.scss"
+import "./Header.scss"
 
 export const Header = () => {
     return (

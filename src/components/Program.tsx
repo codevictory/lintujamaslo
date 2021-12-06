@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import './styles/program.scss';
+import './Program.scss';
 
 export const Program = () => {
     return (
