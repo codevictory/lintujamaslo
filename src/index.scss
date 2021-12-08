@@ -1,13 +1,18 @@
 @import './colors.scss';
 
 @font-face {
-  font-family: 'Montserrat';
+  font-family: 'Montserrat-Medium';
   src: url(./fonts/Montserrat/Montserrat-Medium.ttf);
+}
+
+@font-face {
+  font-family: 'Montserrat-Light';
+  src: url(./fonts/Montserrat/Montserrat-Light.ttf);
 }
 
 body {
   margin: 0;
-  font-family: 'Montserrat', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
+  font-family: 'Montserrat-Light', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
     'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
