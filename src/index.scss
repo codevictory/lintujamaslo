@@ -17,6 +17,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: $background !important;
+  background-image: url('./img/bg-flowers.png');
+  background-repeat: no-repeat;
+  background-size: cover;
   color: $green-text !important;
 }
 
