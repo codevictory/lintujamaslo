@@ -1,15 +1,44 @@
 @import '../colors.scss';
 
 .App-header {
-  background-color: $primary;
+  background-color: $background;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
-}
+  margin-top: 2rem;
 
-.App-header h1 {
-  color: white;
+  h1 {
+    color: $green-text;
+    text-transform: uppercase;
+    font-size: 3rem;
+
+    span {
+      color: $brown-text;
+      font-size: 0.5em;
+    }
+  }
+
+  .diamondIcon {
+    margin-bottom: 1rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
+  .dateAndPlace {
+    text-align: center;
+    text-transform: uppercase;
+
+    h2 {
+      font-family: 'Montserrat-Medium';
+      font-size: 1.4rem;
+      color: $brown-text !important;
+      margin-bottom: -0.7rem;
+    }
+
+    h3 {
+      font-size: 1rem;
+      color: $brown-text !important;
+    }
+  }
 }
