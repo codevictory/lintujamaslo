@@ -8,6 +8,7 @@ import { IntlProvider } from 'react-intl';
 import { localization } from './constants/localization';
 import { Header } from './components/Header';
 import { ConfigProvider } from 'antd';
+import { LanguagePicker } from './components/LanguagePicker';
 
 export default function App() {
   const language = useRecoilValue(currentLanguage)
@@ -21,6 +22,7 @@ export default function App() {
   return (
     <IntlProvider locale={language} messages={localization[language]}>
       <Header />
+      <LanguagePicker />
       <Router>
         <Switch>
           <Route exact path="/:page">

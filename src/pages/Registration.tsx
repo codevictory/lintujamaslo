@@ -11,7 +11,6 @@ export const Registration = () => {
                 <img src={mainPicture} />
                 <p><FormattedMessage id="registration.welcome" /></p>
                 <p><FormattedMessage id="registration.questions" /></p>
-
             </div>
             <div className="Registration-form">
                 <RegForm />

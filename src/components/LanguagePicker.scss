@@ -1,7 +1,18 @@
-.ant-dropdown-trigger.dropdown {
-  padding-right: 7px;
-  padding-left: 7px;
-  padding-top: 1px;
-  border-radius: 5%;
-  margin-bottom: 10px;
+@import '../colors.scss';
+
+h1 {
+  text-align: center;
+  color: $brown-text !important;
+  font-family: 'Montserrat-Medium';
+
+  button {
+    text-transform: uppercase;
+    border: none;
+    background-color: $background;
+    width: 3rem;
+  }
+
+  button:hover {
+    background-color: #e4e4de;
+  }
 }
