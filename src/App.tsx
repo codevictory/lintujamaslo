@@ -14,7 +14,7 @@ export default function App() {
 
   ConfigProvider.config({
     theme: {
-      primaryColor: '#21b635',
+      primaryColor: '#a7ab81',
     }
   });
 

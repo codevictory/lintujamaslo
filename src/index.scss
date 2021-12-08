@@ -16,7 +16,8 @@ body {
     'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: $secondary !important;
+  background-color: $background !important;
+  color: $green-text !important;
 }
 
 code {
