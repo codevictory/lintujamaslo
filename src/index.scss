@@ -16,14 +16,18 @@ body {
     'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: $background !important;
-  background-image: url('./img/bg-flowers.png');
-  background-repeat: no-repeat;
-  background-size: cover;
   color: $green-text !important;
+  background-color: $background !important;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+#root {
+  background-image: url('./img/bg-flowers.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100%;
 }
