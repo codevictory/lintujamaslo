@@ -1,8 +1,11 @@
+@import '../colors.scss';
+
 .Registration {
   display: flex;
   align-items: center;
   flex-direction: column;
   white-space: pre-line;
+  text-transform: uppercase;
 
   .Registration-main {
     display: flex;
@@ -14,8 +17,19 @@
       max-width: 60%;
     }
 
-    p {
+    h2 {
+      color: $brown-text !important;
+      font-family: 'Montserrat-Light';
+      margin-top: -1rem;
+    }
+  }
+
+  .Registration-desc {
+    max-width: 1rem;
+    margin-top: 3rem;
+    h2 {
       text-align: center;
+      color: $brown-text !important;
     }
   }
 

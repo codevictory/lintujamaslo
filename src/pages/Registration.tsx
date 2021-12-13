@@ -1,6 +1,5 @@
 import "./Registration.scss";
 import { FormattedMessage } from 'react-intl';
-import mainPicture from "../img/lintujamaslo.jpg"
 
 import { RegForm } from '../components/RegForm'
 
@@ -8,9 +7,22 @@ export const Registration = () => {
     return (
         <main className="Registration">
             <div className="Registration-main">
-                <img src={mainPicture} />
-                <p><FormattedMessage id="registration.welcome" /></p>
-                <p><FormattedMessage id="registration.questions" /></p>
+                <h1><FormattedMessage id="registration.welcome" /><br /><FormattedMessage id="common.datetime" /></h1>
+                <h2><FormattedMessage id="common.place" /></h2>
+            </div>
+            <div className="Registration-desc">
+                <h2>
+                    <FormattedMessage id="registration.questions" />
+                </h2>
+                <h2>
+                    <FormattedMessage id="registration.about" />
+                </h2>
+                <h2>
+                    <FormattedMessage id="registration.saveTheLink" />
+                </h2>
+                <h2>
+                    <FormattedMessage id="registration.fillInBefore" />
+                </h2>
             </div>
             <div className="Registration-form">
                 <RegForm />

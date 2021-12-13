@@ -1,4 +1,7 @@
 export const registration: Record<string, string> = {
-    "registration.welcome": "Welcome to our wedding on plaa plaa August 2022",
-    "registration.questions": "If you have any question about:\nmushrooms\ndangerous animals"
+    "registration.welcome": "Tervetuloa häihimme",
+    "registration.questions": "Jos sinulla on mitään kysymyksiä\nsienistä\nvaarallisista pedoista",
+    "registration.about": "Päivitämme menua ja ohjelmaa osoitteeseen lintujamaslo.net",
+    "registration.saveTheLink": "Laita linkki talteen",
+    "registration.fillInBefore": "Lisääthän teiltä osallistuvat henkilöt viimeistään 27th of June",
 }

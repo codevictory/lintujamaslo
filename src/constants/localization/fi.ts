@@ -1,5 +1,5 @@
 import { common } from "./common/fi";
-import { registration } from './registration/en';
+import { registration } from './registration/fi';
 
 const fi: Record<string, string> = {
     ...common,
