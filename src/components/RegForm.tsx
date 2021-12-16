@@ -1,111 +1,212 @@
-import { Button, Checkbox, Col, Form, Input, Row, Select } from 'antd';
+import { Button, Form, Input, Select } from 'antd';
 import { useParams } from 'react-router';
-import { MinusCircleOutlined, PlusOutlined } from '@ant-design/icons';
 
-import "./RegForm.scss";
+import './RegForm.scss';
 import { addVisitor } from '../api';
-import { arrayToString, capFirstLetter } from './utils';
+import { arrayToString } from './utils';
 import { Visitor } from '../model/visitor';
+import { FormattedMessage, useIntl } from 'react-intl';
+import { useState } from 'react';
 
 const { Option } = Select;
 
 interface ParamTypes {
-    id: string;
+  id: string;
 }
 
 interface FormValues {
-    visitors: Visitor[];
+  visitors: Visitor[];
 }
 
-const preferences = ["vegan", "vegetarian", "everything goes"].map(preference => {
-    return <Option key={preference} value={preference}>{capFirstLetter(preference)}</Option>
+const preferences = ['vegan', 'vegetarian', 'murder'].map((preference) => {
+  return (
+    <Option key={preference} value={preference}>
+      <FormattedMessage id={'registration.form.preferences.' + preference} />
+    </Option>
+  );
 });
 
-const allergies = ["lactose", "dairy", "gluten", "wheat"].map(allergy => {
-    return <Option key={allergy} value={allergy}>{capFirstLetter(allergy)}</Option>
+const allergies = ['lactose', 'dairy', 'gluten', 'wheat'].map((allergy) => {
+  return (
+    <Option key={allergy} value={allergy}>
+      <FormattedMessage id={'registration.form.allergies.' + allergy} />
+    </Option>
+  );
 });
+
+const welcomeDrinks = ['alcoholBubbles', 'alcoholFreeBubbles'].map(
+  (welcomeDrink) => {
+    return (
+      <Option key={welcomeDrink} value={welcomeDrink}>
+        <FormattedMessage
+          id={'registration.form.welcomeDrinks.' + welcomeDrink}
+        />
+      </Option>
+    );
+  }
+);
 
 export const RegForm = () => {
-    const { id } = useParams<ParamTypes>();
+  const { id } = useParams<ParamTypes>();
+  const intl = useIntl();
+  const [visitorCount, setVisitorCount] = useState(0);
 
-    const onFinish = (values: FormValues) => {
-        values.visitors.map(visitor => {
-            addVisitor({
-                ...visitor,
-                allergies: visitor.allergies ? arrayToString(visitor.allergies) : "",
-                services: visitor.services ? arrayToString(visitor.services) : "",
-                preferences: visitor.preferences ?? "",
-                invitationId: visitor.invitationId = atob(id),
-            });
-        });
-    }
+  const onFinish = (values: FormValues) => {
+    values.visitors.map((visitor) => {
+      addVisitor({
+        ...visitor,
+        allergies: visitor.allergies ? arrayToString(visitor.allergies) : '',
+        services: visitor.services ? arrayToString(visitor.services) : '',
+        preferences: visitor.preferences ?? '',
+        invitationId: (visitor.invitationId = atob(id)),
+      });
+    });
+  };
 
-    const [form] = Form.useForm();
+  const [form] = Form.useForm();
 
-    return (
-        <Form form={form} name="registration" onFinish={onFinish} autoComplete="off">
-            <Form.List name="visitors">
-                {(fields, { add, remove }) => (
-                    <>
-                        {
-                            fields.map(field => (
-                                <div className="visitors" key={field.key}>
-                                    <div className="nameBar">
-                                        <Form.Item
-                                            label="Name"
-                                            name={[field.name, 'name']}
-                                            fieldKey={[field.fieldKey, 'name']}
-                                            rules={[{ required: true, message: 'Missing name' }]}
-                                        >
-                                            <Input placeholder="Full or nickname" />
-                                        </Form.Item>
-                                        <MinusCircleOutlined onClick={() => remove(field.name)} className="deleteButton" />
-                                    </div>
-                                    <Form.Item name={[field.name, "allergies"]} label="Allergies"
-                                        fieldKey={[field.fieldKey, 'allergies']}>
-                                        <Select mode="tags" placeholder="Lactose, wheat...">
-                                            {allergies}
-                                        </Select>
-                                    </Form.Item>
-                                    <Form.Item name={[field.name, "preferences"]} label="Preferences"
-                                        fieldKey={[field.fieldKey, 'preferences']}>
-                                        <Select placeholder="Vegan...">
-                                            {preferences}
-                                        </Select>
-                                    </Form.Item>
-                                    <Form.Item
-                                        name={[field.name, "services"]} label="Do you need?"
-                                        fieldKey={[field.fieldKey, 'services']}>
-                                        <Checkbox.Group>
-                                            <Row>
-                                                <Col>
-                                                    <Checkbox value="ride">
-                                                        Ride
-                                                    </Checkbox>
-                                                </Col>
-                                                <Col>
-                                                    <Checkbox value="accomodation">
-                                                        Accomodation
-                                                    </Checkbox>
-                                                </Col>
-                                            </Row>
-                                        </Checkbox.Group>
-                                    </Form.Item>
-                                </div>
-                            ))}
-                        <Form.Item>
-                            <Button type="dashed" onClick={() => add()} block icon={<PlusOutlined />}>
-                                Add visitor
-                            </Button>
-                        </Form.Item>
-                    </>
-                )}
-            </Form.List>
+  return (
+    <Form
+      form={form}
+      name='registration'
+      onFinish={onFinish}
+      autoComplete='off'
+      layout='vertical'
+    >
+      <Form.List name='visitors'>
+        {(fields, { add, remove }) => (
+          <>
+            <div className='visitors'>
+              {fields.map((field) => (
+                <div className='visitor' key={field.key}>
+                  <Form.Item
+                    label={intl.formatMessage({
+                      id: 'registration.form.name',
+                    })}
+                    name={[field.name, 'name']}
+                    fieldKey={[field.fieldKey, 'name']}
+                    rules={[
+                      {
+                        required: true,
+                        message: intl.formatMessage({
+                          id: 'registration.form.name.missing',
+                        }),
+                      },
+                    ]}
+                  >
+                    <Input
+                      placeholder={intl.formatMessage({
+                        id: 'registration.form.name.placeholder',
+                      })}
+                    />
+                  </Form.Item>
+                  <Form.Item
+                    name={[field.name, 'allergies']}
+                    label={intl.formatMessage({
+                      id: 'registration.form.allergies',
+                    })}
+                    fieldKey={[field.fieldKey, 'allergies']}
+                  >
+                    <Select
+                      mode='tags'
+                      placeholder={intl.formatMessage({
+                        id: 'registration.form.allergies.placeholder',
+                      })}
+                    >
+                      {allergies}
+                    </Select>
+                  </Form.Item>
+                  <Form.Item
+                    name={[field.name, 'preferences']}
+                    label={intl.formatMessage({
+                      id: 'registration.form.preferences',
+                    })}
+                    fieldKey={[field.fieldKey, 'preferences']}
+                  >
+                    <Select
+                      placeholder={intl.formatMessage({
+                        id: 'registration.form.preferences.placeholder',
+                      })}
+                    >
+                      {preferences}
+                    </Select>
+                  </Form.Item>
+                  <Form.Item
+                    name={[field.name, 'welcomeDrinks']}
+                    label={intl.formatMessage({
+                      id: 'registration.form.welcomeDrinks',
+                    })}
+                    rules={[
+                      {
+                        required: true,
+                        message: intl.formatMessage({
+                          id: 'registration.form.welcomeDrinks.missing',
+                        }),
+                      },
+                    ]}
+                    fieldKey={[field.fieldKey, 'preferences']}
+                  >
+                    <Select
+                      placeholder={intl.formatMessage({
+                        id: 'registration.form.welcomeDrinks.placeholder',
+                      })}
+                    >
+                      {welcomeDrinks}
+                    </Select>
+                  </Form.Item>
+                  <Button
+                    danger
+                    onClick={() => {
+                      remove(field.name);
+                      setVisitorCount(visitorCount - 1);
+                    }}
+                    shape='round'
+                    size='large'
+                  >
+                    <FormattedMessage id='registration.form.remove' />
+                  </Button>
+                </div>
+              ))}
+            </div>
             <Form.Item>
-                <Button type="primary" htmlType="submit">
-                    Submit
-                </Button>
+              <Button
+                className='addVisitorButton'
+                size='large'
+                onClick={() => {
+                  add();
+                  setVisitorCount(visitorCount + 1);
+                }}
+                shape='round'
+              >
+                <FormattedMessage id='registration.addVisitor' />
+              </Button>
             </Form.Item>
-        </Form>
-    );
+          </>
+        )}
+      </Form.List>
+      {visitorCount == 0 ? (
+        <Form.Item>
+          <Button
+            className='submitButton'
+            type='dashed'
+            htmlType='submit'
+            shape='round'
+          >
+            <FormattedMessage id='registration.form.decline' />
+          </Button>
+        </Form.Item>
+      ) : (
+        <Form.Item>
+          <Button
+            className='submitButton'
+            htmlType='submit'
+            size='large'
+            shape='round'
+          >
+            <FormattedMessage id='registration.form.submit' />
+          </Button>
+        </Form.Item>
+      )}
+    </Form>
+  );
 };

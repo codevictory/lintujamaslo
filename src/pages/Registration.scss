@@ -5,13 +5,13 @@
   align-items: center;
   flex-direction: column;
   white-space: pre-line;
-  text-transform: uppercase;
 
   .Registration-main {
     display: flex;
     flex-direction: column;
     align-items: center;
     max-width: 50%;
+    text-transform: uppercase;
 
     img {
       max-width: 60%;
@@ -27,6 +27,7 @@
   .Registration-desc {
     max-width: 23rem;
     margin-top: 3rem;
+    text-transform: uppercase;
     h2 {
       text-align: center;
       color: $brown-text !important;
