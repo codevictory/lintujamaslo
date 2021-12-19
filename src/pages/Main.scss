@@ -1,5 +1,46 @@
+@import '../colors.scss';
+
 .Main {
+  text-align: center;
   display: flex;
-  flex-direction: column;
   align-items: center;
+  flex-direction: column;
+
+  .Main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid;
+    border-color: $brown-text;
+    border-radius: 300px;
+    width: 48rem;
+
+    .logo-container {
+      margin-top: 3rem;
+    }
+
+    h1 {
+      line-height: 4rem;
+      font-family: 'Montserrat-Light';
+      color: $green-text !important;
+      font-size: 5rem;
+      text-transform: uppercase;
+      margin-bottom: 0px;
+    }
+
+    h2 {
+      color: $brown-text;
+      font-size: 3rem;
+      margin-top: 0em;
+      margin-bottom: 0em;
+    }
+  }
+
+  .extraText {
+    color: $brown-text;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    letter-spacing: 2px;
+  }
 }

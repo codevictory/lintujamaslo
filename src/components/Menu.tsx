@@ -1,56 +1,42 @@
-import "./Menu.scss";
+import './Menu.scss';
 
 export const Menu = () => {
-    return (
-        <article>
-            <h1>Menu</h1>
-            <table>
-                <tr>
-                    <th></th>
-                    <th>Starters</th>
-                    <th></th>
-                </tr>
-                <tr>
-                    <td>Chrumky</td>
-                    <td>Very good yummy yummy. Lorem ipsum dolor sit amet.</td>
-                    <td>Nuts</td>
-                </tr>
-                <tr>
-                    <td>Halusky</td>
-                    <td>Fatty fat stuff.</td>
-                    <td>Meat, fat</td>
-                </tr>
-                <tr>
-                    <th></th>
-                    <th>Main dish</th>
-                    <th></th>
-                </tr>
-                <tr>
-                    <td>Chrumky</td>
-                    <td>Very good yummy yummy. Lorem ipsum dolor sit amet.</td>
-                    <td>Nuts</td>
-                </tr>
-                <tr>
-                    <td>Halusky</td>
-                    <td>Fatty fat stuff.</td>
-                    <td>Meat, fat</td>
-                </tr>
-                <tr>
-                    <th></th>
-                    <th>Dessert</th>
-                    <th></th>
-                </tr>
-                <tr>
-                    <td>Chrumky</td>
-                    <td>Very good yummy yummy. Lorem ipsum dolor sit amet.</td>
-                    <td>Nuts</td>
-                </tr>
-                <tr>
-                    <td>Halusky</td>
-                    <td>Fatty fat stuff.</td>
-                    <td>Meat, fat</td>
-                </tr>
-            </table>
-        </article>
-    )
-}
+  return (
+    <section>
+      <h1>Menu</h1>
+      <article>
+        <h2>Starters</h2>
+
+        <h3>Chrumky</h3>
+        <p>Very good yummy yummy. Lorem ipsum dolor sit amet.</p>
+        <p>Nuts</p>
+
+        <h3>Halusky</h3>
+        <p>Fatty fat stuff.</p>
+        <p>Meat, fat</p>
+      </article>
+      <article>
+        <h2>Main dish</h2>
+
+        <h3>Chrumky</h3>
+        <p>Very good yummy yummy. Lorem ipsum dolor sit amet.</p>
+        <p>Nuts</p>
+
+        <h3>Halusky</h3>
+        <p>Fatty fat stuff.</p>
+        <p>Meat, fat</p>
+      </article>
+      <article>
+        <h2>Dessert</h2>
+
+        <h3>Chrumky</h3>
+        <p>Very good yummy yummy. Lorem ipsum dolor sit amet.</p>
+        <p>Nuts</p>
+
+        <h3>Halusky</h3>
+        <p>Fatty fat stuff.</p>
+        <p>Meat, fat</p>
+      </article>
+    </section>
+  );
+};
