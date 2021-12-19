@@ -1,0 +1,19 @@
+@import '../colors.scss';
+
+.dateAndPlace {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: calc(10px + 2vmin);
+
+  h2 {
+    font-family: 'Montserrat-Medium';
+    font-size: 1.4rem;
+    color: $brown-text !important;
+    margin-bottom: -0.7rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+    color: $brown-text !important;
+  }
+}
