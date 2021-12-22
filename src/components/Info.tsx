@@ -1,11 +1,11 @@
 import { FormattedMessage } from 'react-intl';
-import './Menu.scss';
+import './Info.scss';
 
-export const Menu = () => {
+export const Info = () => {
   return (
-    <section className='Menu'>
+    <section className='Info'>
       <h1>
-        <FormattedMessage id='main.menu' />
+        <FormattedMessage id='main.info' />
       </h1>
       <h2>
         <FormattedMessage id='main.toBeDecided' />

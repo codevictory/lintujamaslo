@@ -8,6 +8,7 @@ import { NotFound } from '../components/NotFound';
 import { LanguagePicker } from '../components/LanguagePicker';
 import { FormattedMessage } from 'react-intl';
 import { DateAndPlace } from '../components/DateAndPlace';
+import { Info } from '../components/Info';
 
 interface MainParams {
   page: string;
@@ -19,17 +20,19 @@ export const Main = () => {
   return (
     <div className='Main'>
       <LanguagePicker />
-      <p className='extraText'>Save the link</p>
+      <p className='extraText'>
+        <FormattedMessage id='main.saveTheLink' />
+      </p>
       <section className='Main-container'>
         <article className='logo-container'>
           <Link to='/'>
-            <h1>
+            <h1 className='Main-title'>
               <FormattedMessage id='common.lintu' />
             </h1>
-            <h2>
+            <h2 className='Main-and'>
               <span> &amp; </span>
             </h2>
-            <h1>
+            <h1 className='Main-title'>
               <FormattedMessage id='common.maslo' />
             </h1>
           </Link>
@@ -43,6 +46,8 @@ export const Main = () => {
               <Menu />
             ) : page === 'program' ? (
               <Program />
+            ) : page === 'info' ? (
+              <Info />
             ) : (
               <NotFound />
             )}
@@ -53,7 +58,9 @@ export const Main = () => {
           </article>
         )}
       </section>
-      <p className='extraText'>Attend the party</p>
+      <p className='extraText'>
+        <FormattedMessage id='main.welcome' />
+      </p>
     </div>
   );
 };

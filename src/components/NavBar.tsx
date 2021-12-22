@@ -1,17 +1,22 @@
 import './NavBar.scss';
 import { Link } from 'react-router-dom';
-import { LanguagePicker } from './LanguagePicker';
-import { Button, Menu } from 'antd';
 import { Diamond } from './Diamond';
+import { FormattedMessage } from 'react-intl';
 
 export const NavBar = () => {
   return (
     <div className='NavBar'>
-      <Link to='/menu'>Menu</Link>
+      <Link to='/menu'>
+        <FormattedMessage id='main.menu' />
+      </Link>
       <Diamond />
-      <Link to='/program'>Program</Link>
+      <Link to='/program'>
+        <FormattedMessage id='main.program' />
+      </Link>
       <Diamond />
-      <Link to='/program'>Info</Link>
+      <Link to='/info'>
+        <FormattedMessage id='main.info' />
+      </Link>
     </div>
   );
 };

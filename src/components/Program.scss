@@ -1,21 +1,14 @@
-table {
-  width: 100%;
-}
+@import '../colors.scss';
 
-table,
-td,
-th {
-  border-bottom: 1px solid black;
-}
+.Program {
+  h1 {
+    font-size: 4rem;
+  }
 
-th {
-  height: 10vh;
-}
-
-tr {
-  line-break: auto;
-}
-th,
-td {
-  width: 33%;
+  h2 {
+    font-size: 2rem;
+    color: $green-text;
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
 }
