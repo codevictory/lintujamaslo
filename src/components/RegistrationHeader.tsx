@@ -12,7 +12,7 @@ export const RegistrationHeader = () => {
         <FormattedMessage id='common.maslo' />
       </h1>
       <Diamond />
-      <DateAndPlace />
+      <DateAndPlace size='small' />
     </header>
   );
 };

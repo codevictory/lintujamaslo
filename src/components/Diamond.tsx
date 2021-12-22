@@ -1,3 +1,5 @@
+import './Diamond.scss';
+
 export const Diamond = () => {
   return (
     <svg

@@ -4,16 +4,29 @@
   text-align: center;
   text-transform: uppercase;
   font-size: calc(10px + 2vmin);
+  margin-bottom: 1rem;
 
   h2 {
     font-family: 'Montserrat-Medium';
-    font-size: 1.4rem;
     color: $brown-text !important;
-    margin-bottom: -0.7rem;
+    margin-bottom: -0.7rem !important;
+
+    &.large {
+      font-size: 2rem !important;
+    }
+    &.small {
+      font-size: 1.4rem !important;
+    }
   }
 
   h3 {
-    font-size: 1rem;
     color: $brown-text !important;
+
+    &.large {
+      font-size: 1.4rem !important;
+    }
+    &.small {
+      font-size: 0.8rem !important;
+    }
   }
 }

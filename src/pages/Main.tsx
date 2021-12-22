@@ -49,7 +49,7 @@ export const Main = () => {
           </article>
         ) : (
           <article>
-            <DateAndPlace />
+            <DateAndPlace size='large' />
           </article>
         )}
       </section>
