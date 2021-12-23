@@ -12,28 +12,29 @@ export const Registration = () => {
       <LanguagePicker />
       <main className='Registration'>
         <div className='Registration-main'>
-          <h1>
+          <h1 className='Registration-welcome'>
             <FormattedMessage id='registration.welcome' />
-            <br />
-            <FormattedMessage id='common.datetime' />
+          </h1>
+          <h1>
+            <FormattedMessage id='registration.datetime' />
           </h1>
           <h2>
-            <FormattedMessage id='common.place' />
+            <FormattedMessage id='registration.place' />
           </h2>
         </div>
         <div className='Registration-desc'>
-          <h2>
+          <p>
             <FormattedMessage id='registration.questions' />
-          </h2>
-          <h2>
+          </p>
+          <p>
             <FormattedMessage id='registration.about' />
-          </h2>
-          <h2>
+          </p>
+          <p>
             <FormattedMessage id='registration.saveTheLink' />
-          </h2>
-          <h2>
+          </p>
+          <p>
             <FormattedMessage id='registration.fillInBefore' />
-          </h2>
+          </p>
         </div>
         <div className='Registration-form'>
           <RegForm />

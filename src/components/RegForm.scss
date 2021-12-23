@@ -71,3 +71,10 @@ form#registration {
     background-color: $background !important;
   }
 }
+
+@media screen and (max-width: 600px) {
+  .submitButton {
+    max-width: 100%;
+    white-space: break-spaces;
+  }
+}

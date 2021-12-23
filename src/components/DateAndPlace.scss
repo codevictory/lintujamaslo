@@ -1,9 +1,8 @@
 @import '../colors.scss';
 
-.dateAndPlace {
+.DateAndPlace {
   text-align: center;
   text-transform: uppercase;
-  font-size: calc(10px + 2vmin);
   margin-bottom: 1rem;
 
   h2 {
@@ -29,4 +28,7 @@
       font-size: 0.8rem !important;
     }
   }
+}
+
+@media screen and (max-width: 600px) {
 }

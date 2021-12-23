@@ -4,7 +4,7 @@ import { FormattedMessage } from 'react-intl';
 
 export const DateAndPlace = (props: { size: string }) => {
   return (
-    <div className='dateAndPlace'>
+    <div className='DateAndPlace'>
       <h2 className={props.size}>
         <FormattedMessage id='common.datetime' />
       </h2>

@@ -1,5 +1,7 @@
 export const registration: Record<string, string> = {
     "registration.welcome": "Welcome to our wedding table",
+    "registration.datetime": "27th of August from 11:00 on",
+    "registration.place": "In Seurantalo of Livonsaari",
     "registration.questions": "If you have any question about:\nmushrooms\ndangerous animals",
     "registration.about": "We will be updating the program and menu in lintujamaslo.net",
     "registration.saveTheLink": "Save the link",

@@ -1,6 +1,6 @@
 @import '../colors.scss';
 
-h1 {
+.LanguagePicker {
   text-align: center;
   color: $brown-text !important;
   font-family: 'Montserrat-Medium';
@@ -14,5 +14,11 @@ h1 {
 
   button:hover {
     background-color: #e4e4de;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .LanguagePicker {
+    font-size: 1.6rem;
   }
 }

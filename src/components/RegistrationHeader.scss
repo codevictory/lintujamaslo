@@ -20,3 +20,20 @@
     }
   }
 }
+
+@media screen and (max-width: 600px) {
+  .Diamond {
+    margin: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .App-header {
+    flex-direction: column;
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: -3rem;
+    }
+  }
+}

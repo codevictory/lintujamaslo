@@ -1,5 +1,7 @@
 export const registration: Record<string, string> = {
     "registration.welcome": "Tervetuloa häihimme",
+    "registration.datetime": "Elokuun 27. päivänä kello 11:00 alkaen",
+    "registration.place": "Livonsaaren Seurantalolla",
     "registration.questions": "Jos sinulla on mitään kysymyksiä\nsienistä\nvaarallisista pedoista",
     "registration.about": "Päivitämme menua ja ohjelmaa osoitteeseen lintujamaslo.net",
     "registration.saveTheLink": "Laita linkki talteen",
