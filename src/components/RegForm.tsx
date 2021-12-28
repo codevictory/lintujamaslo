@@ -1,4 +1,5 @@
 import { Button, Form, Input, Select } from 'antd';
+import { CloseCircleOutlined } from '@ant-design/icons';
 import { useParams } from 'react-router';
 
 import './RegForm.scss';
@@ -18,7 +19,7 @@ interface FormValues {
   visitors: Visitor[];
 }
 
-const preferences = ['vegan', 'vegetarian', 'murder'].map((preference) => {
+const preferences = ['vegan', 'vegetarian', 'everything'].map((preference) => {
   return (
     <Option key={preference} value={preference}>
       <FormattedMessage id={'registration.form.preferences.' + preference} />
@@ -71,7 +72,6 @@ export const RegForm = () => {
       name='registration'
       onFinish={onFinish}
       autoComplete='off'
-      layout='vertical'
     >
       <Form.List name='visitors'>
         {(fields, { add, remove }) => (
@@ -123,13 +123,7 @@ export const RegForm = () => {
                     })}
                     fieldKey={[field.fieldKey, 'preferences']}
                   >
-                    <Select
-                      placeholder={intl.formatMessage({
-                        id: 'registration.form.preferences.placeholder',
-                      })}
-                    >
-                      {preferences}
-                    </Select>
+                    <Select defaultValue='everything'>{preferences}</Select>
                   </Form.Item>
                   <Form.Item
                     name={[field.name, 'welcomeDrinks']}

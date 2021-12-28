@@ -35,10 +35,23 @@ form#registration {
   label,
   span {
     font-size: 1.3rem;
+    height: unset;
   }
 
   .ant-form-item {
     width: 100%;
+    .ant-form-item-label {
+      width: 100%;
+      text-align: left;
+    }
+
+    .ant-select-arrow svg {
+      padding-bottom: 7px;
+    }
+
+    .anticon-close svg {
+      padding-top: 3px;
+    }
   }
 }
 

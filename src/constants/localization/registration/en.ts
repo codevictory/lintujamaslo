@@ -16,18 +16,17 @@ export const registration: Record<string, string> = {
     "registration.form.name.placeholder": "Full or nickname",
     "registration.form.name.missing": "Missing name",
 
-    "registration.form.allergies": "Food allergies",
-    "registration.form.allergies.placeholder": "Lactose, wheat...",
+    "registration.form.allergies": "Food allergies (select or write)",
+    "registration.form.allergies.placeholder": "Everything goes",
     "registration.form.allergies.lactose": "Lactose",
     "registration.form.allergies.dairy": "Dairy",
     "registration.form.allergies.gluten": "Gluten",
     "registration.form.allergies.wheat": "Wheat",
     
     "registration.form.preferences": "Food preferences",
-    "registration.form.preferences.placeholder": "Vegan...",
+    "registration.form.preferences.everything": "Everything goes",
     "registration.form.preferences.vegan": "Vegan",
     "registration.form.preferences.vegetarian": "Vegetarian",
-    "registration.form.preferences.murder": "Murder",
     
     "registration.form.welcomeDrinks": "Welcome drink",
     "registration.form.welcomeDrinks.placeholder": "What fancy you?",
