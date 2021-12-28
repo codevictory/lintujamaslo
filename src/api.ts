@@ -1,4 +1,4 @@
-import { initializeApp } from "firebase/app";
+import { FirebaseError, initializeApp } from "firebase/app";
 import { getFirestore, setDoc, doc } from "firebase/firestore"; 
 import { Visitor } from './model/visitor';
 
@@ -16,13 +16,18 @@ initializeApp(firebaseConfig);
 
 const db = getFirestore();
 
-export const addVisitor = async (visitor: Visitor) => {
-  await setDoc(doc(db, "visitors", visitor.name), {
-    invitationId: visitor.invitationId,
-    allergies: visitor.allergies,
-    welcomeDrink: visitor.welcomeDrink,
-    preferences: visitor.preferences
-  });
+export const addVisitor = async (visitor: Visitor): Promise<string> => {
+  try {
+    await setDoc(doc(db, "visitors", visitor.name), {
+      invitationId: visitor.invitationId,
+      allergies: visitor.allergies,
+      welcomeDrink: visitor.welcomeDrink,
+      preferences: visitor.preferences
+    });
 
-  await setDoc(doc(db, "submitted", visitor.invitationId), {})
+    await setDoc(doc(db, "submitted", visitor.invitationId), {})
+  } catch(error: any) {
+    return error.code;
+  }
+  return 'success';
 }
