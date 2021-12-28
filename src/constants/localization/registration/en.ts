@@ -28,9 +28,14 @@ export const registration: Record<string, string> = {
     "registration.form.preferences.vegan": "Vegan",
     "registration.form.preferences.vegetarian": "Vegetarian",
     
-    "registration.form.welcomeDrinks": "Welcome drink",
-    "registration.form.welcomeDrinks.placeholder": "What fancy you?",
-    "registration.form.welcomeDrinks.missing": "Missing welcome drink",
-    "registration.form.welcomeDrinks.alcoholBubbles": "Alcohol bubbles",
-    "registration.form.welcomeDrinks.alcoholFreeBubbles": "Alcohol-free bubbles"
+    "registration.form.welcomeDrink": "Welcome drink",
+    "registration.form.welcomeDrink.placeholder": "What fancy you?",
+    "registration.form.welcomeDrink.missing": "Missing welcome drink",
+    "registration.form.welcomeDrink.alcoholBubbles": "Alcohol bubbles",
+    "registration.form.welcomeDrink.alcoholFreeBubbles": "Alcohol-free bubbles",
+    
+    "registration.form.submitModal.title": "You want to add {visitorCount} visitors?",
+    "registration.form.submitModal.description": "The link will not work after the submit.",
+    "registration.form.submitModal.save": "Yes, please",
+    "registration.form.submitModal.back": "No, something is missing...",
 }

@@ -15,7 +15,7 @@ export const registration: Record<string, string> = {
     "registration.form.name": "Nimi",
     "registration.form.name.placeholder": "Koko tai lempinimi",
     "registration.form.name.missing": "Nimi puuttuu",
-    
+
     "registration.form.allergies": "Ruoka-allergiat (valitse tai kirjoita)",
     "registration.form.allergies.placeholder": "Kaikki käy",
     "registration.form.allergies.lactose": "Laktoosi",
@@ -28,9 +28,14 @@ export const registration: Record<string, string> = {
     "registration.form.preferences.vegan": "Vegaaninen",
     "registration.form.preferences.vegetarian": "Kasvis",
     
-    "registration.form.welcomeDrinks": "Tervetuliasmalja",
-    "registration.form.welcomeDrinks.placeholder": "Mitä saisi olla?",
-    "registration.form.welcomeDrinks.missing": "Tervetulias malja puuttuu",
-    "registration.form.welcomeDrinks.alcoholBubbles": "Holillista kuplivaa",
-    "registration.form.welcomeDrinks.alcoholFreeBubbles": "Holitonta kuplivaa"
+    "registration.form.welcomeDrink": "Tervetuliasmalja",
+    "registration.form.welcomeDrink.placeholder": "Mitä saisi olla?",
+    "registration.form.welcomeDrink.missing": "Tervetulias malja puuttuu",
+    "registration.form.welcomeDrink.alcoholBubbles": "Holillista kuplivaa",
+    "registration.form.welcomeDrink.alcoholFreeBubbles": "Holitonta kuplivaa",
+    
+    "registration.form.submitModal.title": "Lisätään siis {visitorCount} vierasta listalle?",
+    "registration.form.submitModal.description": "Tämä linkki lakkaa toimimasta tallennuksen jälkeen.",
+    "registration.form.submitModal.save": "Tallenna",
+    "registration.form.submitModal.back": "Takaisin",
 }

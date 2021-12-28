@@ -20,7 +20,7 @@ export const addVisitor = async (visitor: Visitor) => {
   await setDoc(doc(db, "visitors", visitor.name), {
     invitationId: visitor.invitationId,
     allergies: visitor.allergies,
-    services: visitor.services,
+    welcomeDrink: visitor.welcomeDrink,
     preferences: visitor.preferences
   });
 
