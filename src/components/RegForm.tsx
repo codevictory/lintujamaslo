@@ -1,4 +1,4 @@
-import { Button, Form, Input, Modal, Select } from 'antd';
+import { Button, Form, Input, Modal, notification, Select } from 'antd';
 import { useParams } from 'react-router';
 
 import './RegForm.scss';
@@ -7,6 +7,7 @@ import { arrayToString } from './utils';
 import { Visitor } from '../model/visitor';
 import { FormattedMessage, useIntl } from 'react-intl';
 import { useState } from 'react';
+import { withRouter } from 'react-router-dom';
 
 const { Option } = Select;
 
@@ -46,7 +47,7 @@ const welcomeDrinks = ['alcoholBubbles', 'alcoholFreeBubbles'].map(
   }
 );
 
-export const RegForm = () => {
+const RegForm = ({ history }: any) => {
   const { id } = useParams<ParamTypes>();
   const intl = useIntl();
   const [visitorCount, setVisitorCount] = useState(0);
@@ -60,7 +61,11 @@ export const RegForm = () => {
         preferences: visitor.preferences ?? '',
         welcomeDrink: visitor.welcomeDrink ?? '',
         invitationId: (visitor.invitationId = atob(id)),
-      });
+      }).then((res) =>
+        res === 'permission-denied'
+          ? showError()
+          : history.push('/confirmation')
+      );
     });
   };
 
@@ -72,6 +77,15 @@ export const RegForm = () => {
 
   const onCancel = () => {
     setIsModalVisible(false);
+  };
+
+  const showError = () => {
+    notification.error({
+      message: intl.formatMessage({ id: 'registration.error.title' }),
+      description: intl.formatMessage({ id: 'registration.error.text' }),
+      duration: 0,
+      placement: 'bottomLeft',
+    });
   };
 
   const [form] = Form.useForm();
@@ -237,3 +251,5 @@ export const RegForm = () => {
     </>
   );
 };
+
+export default withRouter(RegForm);

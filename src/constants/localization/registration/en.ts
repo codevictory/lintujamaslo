@@ -38,4 +38,7 @@ export const registration: Record<string, string> = {
     "registration.form.submitModal.description": "The link will not work after the submit.",
     "registration.form.submitModal.save": "Yes, please",
     "registration.form.submitModal.back": "No, something is missing...",
+
+    "registration.error.title": "Link is no longer valid",
+    "registration.error.text": "Your registration is already filled in. Apologies for the excess form filling...",
 }

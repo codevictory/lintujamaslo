@@ -1,7 +1,7 @@
 import './Registration.scss';
 import { FormattedMessage } from 'react-intl';
 
-import { RegForm } from '../components/RegForm';
+import RegForm from '../components/RegForm';
 import { RegistrationHeader } from '../components/RegistrationHeader';
 import { LanguagePicker } from '../components/LanguagePicker';
 

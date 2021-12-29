@@ -38,4 +38,7 @@ export const registration: Record<string, string> = {
     "registration.form.submitModal.description": "Tämä linkki lakkaa toimimasta tallennuksen jälkeen.",
     "registration.form.submitModal.save": "Tallenna",
     "registration.form.submitModal.back": "Takaisin",
+
+    "registration.error.title": "Linkki ei ole enää toiminnassa",
+    "registration.error.text": "Ilmoittautumisesi on jo kirjattu. Pahoittelu ylimääräisestä lomakkeen täyttelystä...",
 }

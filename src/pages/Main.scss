@@ -35,6 +35,13 @@
       margin-top: 0em;
       margin-bottom: 0em;
     }
+
+    .content {
+      h1 {
+        color: $brown-text;
+        font-size: 3.2rem;
+      }
+    }
   }
 
   .extraText {
