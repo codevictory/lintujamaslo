@@ -1,4 +1,4 @@
-import { FirebaseError, initializeApp } from "firebase/app";
+import { initializeApp } from "firebase/app";
 import { getFirestore, setDoc, doc } from "firebase/firestore"; 
 import { Visitor } from './model/visitor';
 
