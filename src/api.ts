@@ -27,6 +27,14 @@ export const addVisitor = async (visitor: Visitor): Promise<string> => {
   } catch(error: any) {
     return error.code;
   }
-  await setDoc(doc(db, "submitted", visitor.invitationId), {});
+  return 'success';
+}
+
+export const submitInvitation = async (invitationId: string): Promise<string> => {
+  try {
+    await setDoc(doc(db, "submitted", invitationId), {});
+  } catch(error: any) {
+    return error.code;
+  }
   return 'success';
 }

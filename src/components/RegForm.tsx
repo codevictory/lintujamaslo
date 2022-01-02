@@ -2,7 +2,7 @@ import { Button, Form, Input, Modal, notification, Select } from 'antd';
 import { useParams } from 'react-router';
 
 import './RegForm.scss';
-import { addVisitor } from '../api';
+import { addVisitor, submitInvitation } from '../api';
 import { arrayToString } from './utils';
 import { Visitor } from '../model/visitor';
 import { FormattedMessage, useIntl } from 'react-intl';
@@ -51,32 +51,53 @@ const RegForm = ({ history }: any) => {
   const { id } = useParams<ParamTypes>();
   const intl = useIntl();
   const [visitorCount, setVisitorCount] = useState(0);
-  const [isModalVisible, setIsModalVisible] = useState(false);
+  const [isSubmitModalVisible, setIsSubmitModalVisible] = useState(false);
+  const [isDeclineModalVisible, setIsDeclineModalVisible] = useState(false);
+  const [isDeclined, setIsDeclined] = useState(false);
+
+  var decodedInvitationId = atob(id);
 
   const onSubmit = (values: FormValues) => {
+    let responseCode: string = '';
+    values.visitors = values.visitors ?? [];
+
     values.visitors.map((visitor) => {
       addVisitor({
         ...visitor,
         allergies: visitor.allergies ? arrayToString(visitor.allergies) : '',
         preferences: visitor.preferences ?? '',
         welcomeDrink: visitor.welcomeDrink ?? '',
-        invitationId: (visitor.invitationId = atob(id)),
-      }).then((res) =>
-        res === 'permission-denied'
-          ? showError()
-          : history.push('/confirmation')
-      );
+        invitationId: (visitor.invitationId = decodedInvitationId),
+      }).then((res) => (responseCode = res));
     });
+
+    submitInvitation(decodedInvitationId).then((res) => (responseCode = res));
+
+    responseCode !== 'success' ? showError() : history.push('/confirmation');
   };
 
-  const onOk = () => {
+  const onDecline = () => {
+    let responseCode: string = '';
+    submitInvitation(decodedInvitationId).then((res) => (responseCode = res));
+    responseCode !== 'success' ? showError() : history.push('/confirmation');
+  };
+
+  const onSubmitOk = () => {
     form.submit();
-
-    setIsModalVisible(false);
+    setIsSubmitModalVisible(false);
   };
 
-  const onCancel = () => {
-    setIsModalVisible(false);
+  const onSubmitCancel = () => {
+    setIsSubmitModalVisible(false);
+  };
+
+  const onDeclineOk = () => {
+    form.submit();
+    setIsDeclineModalVisible(false);
+  };
+
+  const onDeclineCancel = () => {
+    setIsDeclineModalVisible(false);
   };
 
   const showError = () => {
@@ -95,7 +116,7 @@ const RegForm = ({ history }: any) => {
       <Form
         form={form}
         name='registration'
-        onFinish={onSubmit}
+        onFinish={isDeclined ? onDecline : onSubmit}
         autoComplete='off'
       >
         <Form.List name='visitors'>
@@ -147,8 +168,9 @@ const RegForm = ({ history }: any) => {
                         id: 'registration.form.preferences',
                       })}
                       fieldKey={[field.fieldKey, 'preferences']}
+                      initialValue='everything'
                     >
-                      <Select defaultValue='everything'>{preferences}</Select>
+                      <Select>{preferences}</Select>
                     </Form.Item>
                     <Form.Item
                       name={[field.name, 'welcomeDrink']}
@@ -207,8 +229,11 @@ const RegForm = ({ history }: any) => {
           <Form.Item>
             <Button
               className='submitButton'
+              onClick={(_) => {
+                setIsDeclined(true);
+                setIsDeclineModalVisible(true);
+              }}
               type='dashed'
-              htmlType='submit'
               shape='round'
             >
               <FormattedMessage id='registration.form.decline' />
@@ -218,7 +243,7 @@ const RegForm = ({ history }: any) => {
           <Form.Item>
             <Button
               className='submitButton'
-              onClick={(e) => setIsModalVisible(true)}
+              onClick={(_) => setIsSubmitModalVisible(true)}
               size='large'
               shape='round'
             >
@@ -234,9 +259,9 @@ const RegForm = ({ history }: any) => {
           },
           { visitorCount: visitorCount }
         )}
-        visible={isModalVisible}
-        onOk={onOk}
-        onCancel={onCancel}
+        visible={isSubmitModalVisible}
+        onOk={onSubmitOk}
+        onCancel={onSubmitCancel}
         okText={intl.formatMessage({
           id: 'registration.form.submitModal.save',
         })}
@@ -246,6 +271,24 @@ const RegForm = ({ history }: any) => {
       >
         <p>
           <FormattedMessage id='registration.form.submitModal.description' />
+        </p>
+      </Modal>
+      <Modal
+        title={intl.formatMessage({
+          id: 'registration.form.declineModal.title',
+        })}
+        visible={isDeclineModalVisible}
+        onOk={onDeclineOk}
+        onCancel={onDeclineCancel}
+        okText={intl.formatMessage({
+          id: 'registration.form.declineModal.save',
+        })}
+        cancelText={intl.formatMessage({
+          id: 'registration.form.declineModal.back',
+        })}
+      >
+        <p>
+          <FormattedMessage id='registration.form.declineModal.description' />
         </p>
       </Modal>
     </>
