@@ -1,0 +1,93 @@
+@import '../colors.scss';
+
+form#registration {
+  max-width: 24.5em;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.visitors {
+  display: flex;
+  width: 72vw;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.visitor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  padding: 1em;
+  border-radius: 5px;
+  background-color: $background;
+  width: 400px;
+  font-family: 'Montserrat-Medium';
+
+  label {
+    color: $brown-text !important;
+  }
+
+  input,
+  label,
+  span {
+    font-size: 1.3rem;
+    height: unset;
+  }
+
+  .ant-form-item {
+    width: 100%;
+    .ant-form-item-label {
+      width: 100%;
+      text-align: left;
+    }
+
+    .ant-select-arrow svg {
+      padding-bottom: 7px;
+    }
+
+    .anticon-close svg {
+      padding-top: 3px;
+    }
+  }
+}
+
+.addVisitorButton {
+  font-family: 'Montserrat-Medium';
+  color: $green-text !important;
+  font-size: 1.5rem !important;
+  height: unset !important;
+  background-color: transparent;
+  text-transform: uppercase;
+  border-width: 0.2rem;
+  border-color: $green-text;
+
+  :hover {
+    background-color: $background !important;
+  }
+}
+
+.submitButton {
+  font-family: 'Montserrat-Medium';
+  color: $green-text !important;
+  font-size: 2rem !important;
+  height: unset !important;
+  background-color: transparent;
+  text-transform: uppercase;
+  border-width: 0.2rem;
+  border-color: $green-text;
+
+  :hover {
+    background-color: $background !important;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .submitButton {
+    max-width: 100%;
+    white-space: break-spaces;
+  }
+}

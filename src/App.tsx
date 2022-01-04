@@ -1,14 +1,34 @@
-import './App.css';
+import './App.scss';
 
-function App() {
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { useRecoilValue } from 'recoil';
+import { currentLanguage } from './atoms/language';
+import { Main } from './pages/Main';
+import { Registration } from './pages/Registration';
+import { Confirmation } from './pages/Confirmation';
+import { IntlProvider } from 'react-intl';
+import { localization } from './constants/localization';
+import { ConfigProvider } from 'antd';
+
+export default function App() {
+  const language = useRecoilValue(currentLanguage);
+
+  ConfigProvider.config({
+    theme: {
+      primaryColor: '#a7ab81',
+    },
+  });
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Lintu ja Maslo</h1>
-        <p><i>Elokuussa 2022</i></p>
-      </header>
-    </div>
+    <IntlProvider locale={language} messages={localization[language]}>
+      <Router>
+        <Switch>
+          <Route path='/' exact component={Main} />
+          <Route path='/confirmation' exact component={Confirmation} />
+          <Route path='/:page' exact component={Main} />
+          <Route path='/registration/:id' component={Registration} />
+        </Switch>
+      </Router>
+    </IntlProvider>
   );
 }
-
-export default App;

@@ -1,0 +1,36 @@
+@import '../colors.scss';
+
+.Confirmation {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 1rem;
+  font-size: 1.5rem;
+
+  h1 {
+    color: $brown-text;
+    font-size: 3.2rem;
+  }
+
+  p {
+    max-width: 48%;
+  }
+
+  a {
+    color: $brown-text;
+    font-family: 'Montserrat-Medium';
+
+    .infoLink {
+      text-decoration: underline;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .Confirmation {
+    p {
+      max-width: 90%;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+.NavBar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 1em;
+  font-size: 2rem;
+
+  .Diamond {
+    margin-right: 1rem;
+    margin-left: 1rem;
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .NavBar {
+    flex-direction: column;
+  }
+}

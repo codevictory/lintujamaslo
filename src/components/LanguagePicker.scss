@@ -1,0 +1,24 @@
+@import '../colors.scss';
+
+.LanguagePicker {
+  text-align: center;
+  color: $brown-text !important;
+  font-family: 'Montserrat-Medium';
+
+  button {
+    text-transform: uppercase;
+    border: none;
+    background-color: $background;
+    width: 3rem;
+  }
+
+  button:hover {
+    background-color: #e4e4de;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .LanguagePicker {
+    font-size: 1.6rem;
+  }
+}

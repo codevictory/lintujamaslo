@@ -1,0 +1,39 @@
+@import '../colors.scss';
+
+.App-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  margin-top: 2rem;
+  gap: 1rem;
+
+  h1 {
+    color: $green-text !important;
+    text-transform: uppercase;
+    font-size: 3rem;
+    font-family: 'Montserrat-Light';
+
+    span {
+      color: $brown-text;
+      font-size: 0.5em;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .Diamond {
+    margin: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .App-header {
+    flex-direction: column;
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: -3rem;
+    }
+  }
+}

@@ -1,0 +1,89 @@
+@import '../colors.scss';
+
+.Registration {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  white-space: pre-line;
+  text-align: center;
+
+  .Registration-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 50%;
+    text-transform: uppercase;
+
+    .Registration-welcome {
+      margin-bottom: 0;
+      text-align: center;
+    }
+
+    img {
+      max-width: 60%;
+    }
+
+    h1 {
+      font-family: 'Montserrat-Medium';
+      text-align: center;
+      color: $brown-text;
+      font-size: 2.3rem;
+    }
+
+    h2 {
+      color: $brown-text !important;
+      font-family: 'Montserrat-Light';
+      margin-top: -1rem;
+      font-size: 2rem;
+    }
+  }
+
+  .Registration-desc {
+    max-width: 23rem;
+    margin-top: 3rem;
+    text-transform: uppercase;
+    max-width: 30%;
+
+    p {
+      font-size: 1.5rem;
+      color: $brown-text !important;
+      font-weight: bold;
+    }
+  }
+
+  .Registration-form {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .Registration {
+    .Registration-main {
+      max-width: 80%;
+
+      .Registration-welcome {
+        color: $green-text !important;
+        margin-bottom: 28px;
+        margin-top: 0px;
+      }
+    }
+
+    .Registration-desc {
+      max-width: 90%;
+      p {
+        font-family: 'Montserrat-Medium';
+        font-weight: unset;
+      }
+    }
+
+    h2 {
+      font-size: 1.5rem !important;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2rem !important;
+    }
+  }
+}

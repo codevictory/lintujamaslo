@@ -1,0 +1,43 @@
+@import '../colors.scss';
+
+.DateAndPlace {
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+
+  h2 {
+    font-family: 'Montserrat-Medium';
+    color: $brown-text !important;
+    margin-bottom: -0.7rem !important;
+
+    &.large {
+      font-size: 2rem !important;
+    }
+    &.small {
+      font-size: 1.4rem !important;
+    }
+  }
+
+  h3 {
+    color: $brown-text !important;
+
+    &.large {
+      font-size: 1.4rem !important;
+    }
+    &.small {
+      font-size: 0.8rem !important;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .DateAndPlace {
+    h2.large {
+      font-size: 1.5rem !important;
+    }
+
+    h3.large {
+      font-size: 1rem !important;
+    }
+  }
+}

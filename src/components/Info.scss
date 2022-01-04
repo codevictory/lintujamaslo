@@ -1,0 +1,14 @@
+@import '../colors.scss';
+
+.Info {
+  h1 {
+    font-size: 4rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+    color: $green-text;
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+}
