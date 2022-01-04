@@ -31,4 +31,13 @@
 }
 
 @media screen and (max-width: 600px) {
+  .DateAndPlace {
+    h2.large {
+      font-size: 1.5rem !important;
+    }
+
+    h3.large {
+      font-size: 1rem !important;
+    }
+  }
 }

@@ -49,6 +49,34 @@
     font-size: 1.1rem;
     text-transform: uppercase;
     margin-bottom: 8px;
+    margin-top: 8px;
     letter-spacing: 2px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .extraText {
+    max-width: 50%;
+    font-weight: bold;
+  }
+
+  .Main {
+    .Main-container {
+      border-radius: 91px;
+      padding-right: 2rem;
+      padding-left: 2rem;
+      width: 90%;
+
+      .Main-title {
+        line-height: 2rem;
+        font-size: 4rem;
+        text-transform: uppercase;
+        margin-bottom: 0px;
+      }
+
+      .logo-container {
+        margin-bottom: 3rem;
+      }
+    }
   }
 }

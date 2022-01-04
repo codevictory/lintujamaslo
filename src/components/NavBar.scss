@@ -11,3 +11,9 @@
     margin-bottom: 0;
   }
 }
+
+@media screen and (max-width: 600px) {
+  .NavBar {
+    flex-direction: column;
+  }
+}
