@@ -47,6 +47,7 @@
     p {
       font-size: 1.5rem;
       color: $brown-text !important;
+      font-weight: bold;
     }
   }
 
@@ -72,6 +73,7 @@
       max-width: 90%;
       p {
         font-family: 'Montserrat-Medium';
+        font-weight: unset;
       }
     }
 

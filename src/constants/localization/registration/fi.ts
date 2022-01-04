@@ -1,11 +1,11 @@
 export const registration: Record<string, string> = {
     "registration.welcome": "Tervetuloa häihimme",
-    "registration.datetime": "Elokuun 27. päivänä kello 11:00 alkaen",
-    "registration.place": "Livonsaaren Seurantalolla",
-    "registration.questions": "Jos sinulla on mitään kysymyksiä\nsienistä\nvaarallisista pedoista",
-    "registration.about": "Päivitämme menua ja ohjelmaa osoitteeseen lintujamaslo.net",
+    "registration.datetime": "Elokuun 27. päivänä",
+    "registration.place": "Livonsaaren Seurantalolle",
+    "registration.questions": "Jos sinulla on mitään kysymyksiä:\n\nAjo-ohjeista\nmajoituksesta\nmistä tahansa muusta\n\nlaitathan mailia veikko@lintujarvi.fi tai maslakova.iveta@gmail.com",
+    "registration.about": "Päivitämme menua ja ohjelmaa osoitteeseen",
     "registration.saveTheLink": "Laita linkki talteen",
-    "registration.fillInBefore": "Lisääthän teiltä osallistuvat henkilöt viimeistään 27. kesäkuuta",
+    "registration.fillInBefore": "Lisääthän teiltä osallistuvat henkilöt huhtikuun loppuun mennessä",
     "registration.addVisitor": "Lisää osallistuja",
 
     "registration.form.submit": "Vahvista",
@@ -40,7 +40,7 @@ export const registration: Record<string, string> = {
     "registration.form.submitModal.back": "Takaisin",
     
     "registration.form.declineModal.title": "Et siis tosiaankaan pääse paikalle?",
-    "registration.form.declineModal.description": "Harmin paikka.",
+    "registration.form.declineModal.description": "Harmin paikka. Tämä linkki lakkaa toimimasta tallennuksen jälkeen.",
     "registration.form.declineModal.save": "Valitettavasti en",
     "registration.form.declineModal.back": "Takaisin",
 

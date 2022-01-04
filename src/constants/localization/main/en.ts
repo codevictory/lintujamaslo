@@ -3,6 +3,6 @@ export const main: Record<string, string> = {
     "main.menu": "Menu",
     "main.info": "Info",
     "main.saveTheLink": "Save the link",
-    "main.welcome": "Welcome!",
+    "main.welcome": "Tervetuloa! Welcome! Vitajte!",
     "main.toBeDecided": "To be specified"
 }

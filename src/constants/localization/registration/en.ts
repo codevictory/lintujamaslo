@@ -1,11 +1,11 @@
 export const registration: Record<string, string> = {
     "registration.welcome": "Welcome to our wedding table",
-    "registration.datetime": "27th of August from 11:00 on",
-    "registration.place": "In Seurantalo of Livonsaari",
-    "registration.questions": "If you have any question about:\nmushrooms\ndangerous animals",
-    "registration.about": "We will be updating the program and menu in lintujamaslo.net",
+    "registration.datetime": "27th of August",
+    "registration.place": "Seurantalo in Livonsaari",
+    "registration.questions": "If you have any question about:\n\ndirections\naccomodation\nwhatever else\n\ncontact us on emails veikko@lintujarvi.fi or maslakova.iveta@gmail.com",
+    "registration.about": "We will be updating the program and menu in",
     "registration.saveTheLink": "Save the link",
-    "registration.fillInBefore": "Please fill the visitors in before 27th of June",
+    "registration.fillInBefore": "Please fill the visitors until the end of April",
     "registration.addVisitor": "Add visitor",
 
     "registration.form.submit": "Submit",
@@ -40,7 +40,7 @@ export const registration: Record<string, string> = {
     "registration.form.submitModal.back": "No, something is missing...",
     
     "registration.form.declineModal.title": "You are sure you cannot attend?",
-    "registration.form.declineModal.description": "Sad to hear that.",
+    "registration.form.declineModal.description": "Sad to hear that. The link will not work after the submit.",
     "registration.form.declineModal.save": "Unfortunately yes",
     "registration.form.declineModal.back": "Let me still think about this...",
 

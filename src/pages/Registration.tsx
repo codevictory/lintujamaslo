@@ -4,6 +4,7 @@ import { FormattedMessage } from 'react-intl';
 import RegForm from '../components/RegForm';
 import { RegistrationHeader } from '../components/RegistrationHeader';
 import { LanguagePicker } from '../components/LanguagePicker';
+import { Link } from 'react-router-dom';
 
 export const Registration = () => {
   return (
@@ -27,10 +28,11 @@ export const Registration = () => {
             <FormattedMessage id='registration.questions' />
           </p>
           <p>
-            <FormattedMessage id='registration.about' />
+            <FormattedMessage id='registration.about' />{' '}
+            <Link to='/'>lintujamaslo.net</Link>
           </p>
           <p>
-            <FormattedMessage id='registration.saveTheLink' />
+            &gt; <FormattedMessage id='registration.saveTheLink' /> &lt;
           </p>
           <p>
             <FormattedMessage id='registration.fillInBefore' />
