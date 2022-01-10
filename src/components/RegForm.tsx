@@ -57,30 +57,29 @@ const RegForm = ({ history }: any) => {
 
   var decodedInvitationId = atob(id);
 
-  const onSubmit = (values: FormValues) => {
+  const onSubmit = async (values: FormValues) => {
     let responseCode: string = '';
     values.visitors = values.visitors ?? [];
 
-    values.visitors.map((visitor) => {
-      addVisitor({
+    values.visitors.map(async (visitor) => {
+      responseCode = await addVisitor({
         ...visitor,
         allergies: visitor.allergies ? arrayToString(visitor.allergies) : '',
         preferences: visitor.preferences ?? '',
         welcomeDrink: visitor.welcomeDrink ?? '',
         invitationId: (visitor.invitationId = decodedInvitationId),
-      }).then((res) => (responseCode = res));
+      });
 
       return visitor;
     });
 
-    submitInvitation(decodedInvitationId).then((res) => (responseCode = res));
+    responseCode = await submitInvitation(decodedInvitationId);
 
     responseCode !== 'success' ? showError() : history.push('/confirmation');
   };
 
-  const onDecline = () => {
-    let responseCode: string = '';
-    submitInvitation(decodedInvitationId).then((res) => (responseCode = res));
+  const onDecline = async () => {
+    let responseCode: string = await submitInvitation(decodedInvitationId);
     responseCode !== 'success' ? showError() : history.push('/confirmation');
   };
 
