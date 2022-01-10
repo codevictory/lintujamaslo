@@ -1,9 +1,9 @@
-import { useRecoilState } from 'recoil';
+import { useSetRecoilState } from 'recoil';
 import { currentLanguage } from '../atoms/language';
 import './LanguagePicker.scss';
 
 export const LanguagePicker = () => {
-  const [lang, setLang] = useRecoilState(currentLanguage);
+  const setLang = useSetRecoilState(currentLanguage);
 
   return (
     <h1 className='LanguagePicker'>

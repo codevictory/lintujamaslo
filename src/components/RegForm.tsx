@@ -69,6 +69,8 @@ const RegForm = ({ history }: any) => {
         welcomeDrink: visitor.welcomeDrink ?? '',
         invitationId: (visitor.invitationId = decodedInvitationId),
       }).then((res) => (responseCode = res));
+
+      return visitor;
     });
 
     submitInvitation(decodedInvitationId).then((res) => (responseCode = res));
@@ -225,7 +227,7 @@ const RegForm = ({ history }: any) => {
             </>
           )}
         </Form.List>
-        {visitorCount == 0 ? (
+        {visitorCount === 0 ? (
           <Form.Item>
             <Button
               className='submitButton'

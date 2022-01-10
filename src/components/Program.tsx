@@ -1,5 +1,4 @@
 import { FormattedMessage } from 'react-intl';
-import { Link } from 'react-router-dom';
 import './Program.scss';
 
 export const Program = () => {
