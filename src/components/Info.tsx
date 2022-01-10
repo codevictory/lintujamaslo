@@ -18,7 +18,7 @@ export const Info = () => {
           <FormattedMessage id='main.info.seurantalo' />
         </p>
         <div className='Info-imageContainer'>
-          <img src={seurantalo} />
+          <img src={seurantalo} alt='seurantalo' />
         </div>
 
         <h2>
@@ -30,7 +30,7 @@ export const Info = () => {
             <FormattedMessage id='main.info.vanhaSalakuljettaja' />
           </h3>
           <div className='Info-imageContainer'>
-            <img src={vanhaSalakuljettaja} />
+            <img src={vanhaSalakuljettaja} alt='vanhaSalakuljettaja' />
           </div>
         </a>
         <p>
@@ -42,7 +42,7 @@ export const Info = () => {
             <FormattedMessage id='main.info.vaihela' />
           </h3>
           <div className='Info-imageContainer'>
-            <img src={vaihela} />
+            <img src={vaihela} alt='vaihela' />
           </div>
         </a>
         <p>
@@ -54,7 +54,7 @@ export const Info = () => {
             <FormattedMessage id='main.info.livonsaariCaravan' />
           </h3>
           <div className='Info-imageContainer'>
-            <img src={livonsaariCaravan} />
+            <img src={livonsaariCaravan} alt='livonsaariCaravan' />
           </div>
         </a>
         <p>
@@ -69,7 +69,7 @@ export const Info = () => {
             <FormattedMessage id='main.info.livonsaarenOsuuskauppa' />
           </h3>
           <div className='Info-imageContainer'>
-            <img src={kauppa} />
+            <img src={kauppa} alt='kauppa' />
           </div>
         </a>
         <p>
