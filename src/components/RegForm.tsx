@@ -130,7 +130,7 @@ const RegForm = ({ history }: any) => {
                         id: 'registration.form.name',
                       })}
                       name={[field.name, 'name']}
-                      fieldKey={[field.fieldKey, 'name']}
+                      fieldKey={[field.key, 'name']}
                       rules={[
                         {
                           required: true,
@@ -151,7 +151,7 @@ const RegForm = ({ history }: any) => {
                       label={intl.formatMessage({
                         id: 'registration.form.allergies',
                       })}
-                      fieldKey={[field.fieldKey, 'allergies']}
+                      fieldKey={[field.key, 'allergies']}
                     >
                       <Select
                         mode='tags'
@@ -167,7 +167,7 @@ const RegForm = ({ history }: any) => {
                       label={intl.formatMessage({
                         id: 'registration.form.preferences',
                       })}
-                      fieldKey={[field.fieldKey, 'preferences']}
+                      fieldKey={[field.key, 'preferences']}
                       initialValue='everything'
                     >
                       <Select>{preferences}</Select>
@@ -185,7 +185,7 @@ const RegForm = ({ history }: any) => {
                           }),
                         },
                       ]}
-                      fieldKey={[field.fieldKey, 'welcomeDrink']}
+                      fieldKey={[field.key, 'welcomeDrink']}
                     >
                       <Select
                         placeholder={intl.formatMessage({
