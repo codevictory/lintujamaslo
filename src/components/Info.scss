@@ -1,14 +1,52 @@
 @import '../colors.scss';
 
 .Info {
-  h1 {
-    font-size: 4rem;
-  }
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
 
-  h2 {
-    font-size: 2rem;
-    color: $green-text;
-    margin-left: 3rem;
-    margin-right: 3rem;
+  .Info-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3rem;
+
+    h1 {
+      font-size: 4rem;
+    }
+
+    h2 {
+      font-size: 2rem;
+      color: $green-text;
+      font-family: 'Montserrat-Medium';
+      margin-left: 3rem;
+      margin-right: 3rem;
+      margin-top: 3rem;
+    }
+
+    h3 {
+      font-size: 1.7rem;
+      color: $brown-text;
+      text-decoration: underline;
+      margin-top: 2rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-top: 1rem;
+    }
+
+    img {
+      width: 20rem;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .Info {
+    .Info-container {
+      img {
+        width: 18rem;
+      }
+    }
   }
 }
