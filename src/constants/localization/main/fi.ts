@@ -11,7 +11,7 @@ export const main: Record<string, string> = {
     "main.info.accomodation": "Majoitus",
     
     "main.info.vanhaSalakuljettaja": "Vanha Salakuljettaja",
-    "main.info.vanhaSalakuljettaja.desc": "Vanha Salakuljettaja tarjoaa aittamajoitusta vilkaan vierasvenesataman vieressä noin 7km juhlapaikalta.",
+    "main.info.vanhaSalakuljettaja.desc": "Vanha Salakuljettaja tarjoaa aittamajoitusta vilkkaan vierasvenesataman vieressä noin 7km juhlapaikalta.",
     
     "main.info.vaihela": "Saaristohotelli Vaihela",
     "main.info.vaihela.desc": "Majoitus todella hienolla paikalla. Hintava, mutta idyllinen. Sijaitsee kahden lossin takana.",

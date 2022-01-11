@@ -20,7 +20,7 @@ export const main: Record<string, string> = {
     "main.info.livonsaariCaravan.desc": "Nearest to the wedding place (approx 4km). Simple and functional",
     
     "main.info.livonsaarenOsuuskauppa": "Livonaaren Osuuskauppa",
-    "main.info.livonsaarenOsuuskauppa.desc": "Best village shop ever! Right on the other side of the road from the wedding place. Here you can find grosery, restaurant and a bar.",
+    "main.info.livonsaarenOsuuskauppa.desc": "Best village shop ever! Right on the other side of the road from the wedding place. Here you can find grocery, restaurant and a bar.",
 
     "main.info.services": "Other services",
 }
