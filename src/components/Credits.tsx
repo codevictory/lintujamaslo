@@ -10,7 +10,7 @@ export const Credits = () => {
           <FormattedMessage id='common.sourceCode' /> codevictory
         </a>
       </span>
-      <span className='separator'>|</span>
+      <span className='separator'>~</span>
       <span>
         <FormattedMessage id='common.design' /> Jana Černá
       </span>

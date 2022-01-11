@@ -10,3 +10,14 @@
     margin-right: 1rem;
   }
 }
+
+@media screen and (max-width: 600px) {
+  .Credits {
+    font-size: 1rem;
+
+    span::after {
+      content: '\A';
+      white-space: pre;
+    }
+  }
+}
