@@ -1,9 +1,12 @@
 rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
-    match /{document=**} {
-      allow read, write: if
-          request.time < timestamp.date(2021, 11, 18);
+    match /visitors/{visitor} {
+      allow create: if exists(/databases/$(database)/documents/invited/$(request.resource.data.invitationId))
+      	&& !exists(/databases/$(database)/documents/submitted/$(request.resource.data.invitationId));
+    }
+    match /submitted/{submitted} {
+      allow create: if exists(/databases/$(database)/documents/invited/$(request.resource.id))
     }
   }
 }
