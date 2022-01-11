@@ -1,13 +1,11 @@
 {
   "hosting": {
-    "public": ".",
+    "public": "build",
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
-    "cleanUrls": true,
-    "appAssociation": "AUTO",
     "rewrites": [
       {
-        "source": "/**",
-        "dynamicLinks": true
+        "source": "**",
+        "destination": "/index.html"
       }
     ]
   }
