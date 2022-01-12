@@ -4,9 +4,18 @@ import { FormattedMessage } from 'react-intl';
 import RegForm from '../components/RegForm';
 import { RegistrationHeader } from '../components/RegistrationHeader';
 import { LanguagePicker } from '../components/LanguagePicker';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
+import { getLangFromSearch } from './utils';
+import { useSetRecoilState } from 'recoil';
+import { currentLanguage } from '../atoms/language';
 
 export const Registration = () => {
+  const { search } = useLocation();
+  const setlang = useSetRecoilState(currentLanguage);
+
+  const lang = getLangFromSearch(search);
+  if (lang != '') setlang(lang);
+
   return (
     <>
       <RegistrationHeader />

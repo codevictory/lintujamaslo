@@ -1,6 +1,6 @@
 import './Main.scss';
 
-import { Link, useParams } from 'react-router-dom';
+import { Link, useParams, useLocation } from 'react-router-dom';
 import { Menu } from '../components/Menu';
 import { NavBar } from '../components/NavBar';
 import { Program } from '../components/Program';
@@ -9,6 +9,9 @@ import { LanguagePicker } from '../components/LanguagePicker';
 import { FormattedMessage } from 'react-intl';
 import { DateAndPlace } from '../components/DateAndPlace';
 import { Info } from '../components/Info';
+import { getLangFromSearch } from './utils';
+import { useSetRecoilState } from 'recoil';
+import { currentLanguage } from '../atoms/language';
 
 interface MainParams {
   page: string;
@@ -16,6 +19,11 @@ interface MainParams {
 
 export const Main = () => {
   const { page } = useParams<MainParams>();
+  const { search } = useLocation();
+  const setlang = useSetRecoilState(currentLanguage);
+
+  const lang = getLangFromSearch(search);
+  if (lang != '') setlang(lang);
 
   return (
     <div className='Main'>
