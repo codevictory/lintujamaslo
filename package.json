@@ -1,6 +1,6 @@
 {
   "name": "lintujamaslo",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@testing-library/react": "^11.1.0",
