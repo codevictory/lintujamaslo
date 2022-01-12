@@ -10,7 +10,7 @@ export const Confirmation = () => {
   const setlang = useSetRecoilState(currentLanguage);
 
   const lang = getLangFromSearch(search);
-  if (lang != '') setlang(lang);
+  if (lang !== '') setlang(lang);
 
   return (
     <div className='Confirmation'>
