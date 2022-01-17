@@ -4,7 +4,7 @@ export const registration: Record<string, string> = {
     "registration.place": "Seurantalo in Livonsaari",
     "registration.questions": "If you have any question about:\n\ndirections\naccomodation\nwhatever else\n\ncontact us on emails veikko@lintujarvi.fi or maslakova.iveta@gmail.com",
     "registration.about": "We will be updating the program and menu in",
-    "registration.saveTheLink": "Save the link",
+    "registration.saveTheLink": "( Save the link )",
     "registration.fillInBefore": "Please fill the visitors until the end of April",
     "registration.addVisitor": "Add visitor",
 
@@ -40,10 +40,10 @@ export const registration: Record<string, string> = {
     "registration.form.submitModal.back": "No, something is missing...",
     
     "registration.form.declineModal.title": "You are sure you cannot attend?",
-    "registration.form.declineModal.description": "Sad to hear that. The link will not work after the submit.",
+    "registration.form.declineModal.description": "We are sorry to hear, if something changes let us know, we will gladly add you. The link will not work after submit.",
     "registration.form.declineModal.save": "Unfortunately yes",
     "registration.form.declineModal.back": "Let me still think about this...",
 
     "registration.error.title": "Link is no longer valid",
-    "registration.error.text": "Your registration is already filled in. Apologies for the excess form filling...",
+    "registration.error.text": "Your registration is already filled in. Upps, mistake at our side?",
 }

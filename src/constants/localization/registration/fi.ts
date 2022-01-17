@@ -4,7 +4,7 @@ export const registration: Record<string, string> = {
     "registration.place": "Livonsaaren Seurantalolle",
     "registration.questions": "Jos sinulla on mitään kysymyksiä:\n\nAjo-ohjeista\nmajoituksesta\nmistä tahansa muusta\n\nlaitathan mailia veikko@lintujarvi.fi tai maslakova.iveta@gmail.com",
     "registration.about": "Päivitämme menua ja ohjelmaa osoitteeseen",
-    "registration.saveTheLink": "Laita linkki talteen",
+    "registration.saveTheLink": "( Laita linkki talteen )",
     "registration.fillInBefore": "Lisääthän teiltä osallistuvat henkilöt huhtikuun loppuun mennessä",
     "registration.addVisitor": "Lisää osallistuja",
 
@@ -40,10 +40,10 @@ export const registration: Record<string, string> = {
     "registration.form.submitModal.back": "Takaisin",
     
     "registration.form.declineModal.title": "Et siis tosiaankaan pääse paikalle?",
-    "registration.form.declineModal.description": "Harmin paikka. Tämä linkki lakkaa toimimasta tallennuksen jälkeen.",
+    "registration.form.declineModal.description": "Harmin paikka. Kerrothan meille, jos tilanne muuttuu niin lisäämme sinut/teidät mieluusti. Tämä linkki lakkaa toimimasta tallennuksen jälkeen.",
     "registration.form.declineModal.save": "Valitettavasti en",
     "registration.form.declineModal.back": "Takaisin",
 
     "registration.error.title": "Linkki ei ole enää voimassa",
-    "registration.error.text": "Ilmoittautumisesi on jo kirjattu. Pahoittelu ylimääräisestä lomakkeen täyttelystä...",
+    "registration.error.text": "Ilmoittautumisesi on jo kirjattu. Outoa. Virhe on varmaan meidän päässä?",
 }

@@ -38,10 +38,10 @@ export const Registration = () => {
           </p>
           <p>
             <FormattedMessage id='registration.about' />{' '}
-            <Link to='/'>lintujamaslo.net</Link>
+            <Link to='/'>lintujamaslo.web.app</Link>
           </p>
           <p>
-            &gt; <FormattedMessage id='registration.saveTheLink' /> &lt;
+            <FormattedMessage id='registration.saveTheLink' />
           </p>
           <p>
             <FormattedMessage id='registration.fillInBefore' />
