@@ -8,13 +8,16 @@ import { Link, useLocation } from 'react-router-dom';
 import { getLangFromSearch } from './utils';
 import { useSetRecoilState } from 'recoil';
 import { currentLanguage } from '../atoms/language';
+import { useEffect } from 'react';
 
 export const Registration = () => {
   const { search } = useLocation();
   const setlang = useSetRecoilState(currentLanguage);
 
-  const lang = getLangFromSearch(search);
-  if (lang !== '') setlang(lang);
+  useEffect(() => {
+    const lang = getLangFromSearch(search);
+    if (lang !== '') setlang(lang);
+  }, []);
 
   return (
     <>

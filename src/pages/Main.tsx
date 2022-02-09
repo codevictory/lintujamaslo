@@ -12,6 +12,7 @@ import { Info } from '../components/Info';
 import { getLangFromSearch } from './utils';
 import { useSetRecoilState } from 'recoil';
 import { currentLanguage } from '../atoms/language';
+import { useEffect } from 'react';
 
 interface MainParams {
   page: string;
@@ -22,8 +23,10 @@ export const Main = () => {
   const { search } = useLocation();
   const setlang = useSetRecoilState(currentLanguage);
 
-  const lang = getLangFromSearch(search);
-  if (lang !== '') setlang(lang);
+  useEffect(() => {
+    const lang = getLangFromSearch(search);
+    if (lang !== '') setlang(lang);
+  }, []);
 
   return (
     <div className='Main'>
