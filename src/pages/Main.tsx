@@ -26,7 +26,7 @@ export const Main = () => {
   useEffect(() => {
     const lang = getLangFromSearch(search);
     if (lang !== '') setlang(lang);
-  }, []);
+  }, [search, setlang]);
 
   return (
     <div className='Main'>
