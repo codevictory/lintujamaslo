@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { FormattedMessage } from 'react-intl';
 import { Link, useLocation } from 'react-router-dom';
 import { useSetRecoilState } from 'recoil';
@@ -9,8 +10,10 @@ export const Confirmation = () => {
   const { search } = useLocation();
   const setlang = useSetRecoilState(currentLanguage);
 
-  const lang = getLangFromSearch(search);
-  if (lang !== '') setlang(lang);
+  useEffect(() => {
+    const lang = getLangFromSearch(search);
+    if (lang !== '') setlang(lang);
+  }, []);
 
   return (
     <div className='Confirmation'>
