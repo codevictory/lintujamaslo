@@ -5,6 +5,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+  font-weight: bold;
 
   .Main-container {
     display: flex;
@@ -45,6 +46,13 @@
     }
   }
 
+  p {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
   .extraText {
     color: $brown-text;
     font-size: 1.1rem;
@@ -52,6 +60,11 @@
     margin-bottom: 8px;
     margin-top: 8px;
     letter-spacing: 2px;
+  }
+
+  .subText {
+    color: $green-text;
+    font-size: 2rem;
   }
 }
 

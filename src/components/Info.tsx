@@ -14,12 +14,23 @@ export const Info = () => {
           <FormattedMessage id='main.info' />
         </h1>
 
+        <h2>
+          <FormattedMessage id='main.info.location' />
+        </h2>
         <p>
-          <FormattedMessage id='main.info.seurantalo' />
+          <FormattedMessage id='main.info.location.desc' />
         </p>
+
         <div className='Info-imageContainer'>
           <img src={seurantalo} alt='seurantalo' />
         </div>
+
+        <h2>
+          <FormattedMessage id='main.info.dresscode' />
+        </h2>
+        <p>
+          <FormattedMessage id='main.info.dresscode.desc' />
+        </p>
 
         <h2>
           <FormattedMessage id='main.info.accomodation' />

@@ -1,12 +1,19 @@
 export const main: Record<string, string> = {
     "main.program": "Ohjelma",
+    "main.program.consecration": "Vihkiminen",
+    "main.program.beingUpdated": "Päivittyy...",
+
     "main.menu": "Menu",
-    "main.info": "Info",
+    
     "main.saveTheLink": "Laita linkki talteen",
     "main.welcome": "Tervetuloa! Welcome! Vitajte!",
-    "main.toBeDecided": "Selviää myöhemmin",
 
-    "main.info.seurantalo": "Juhlapaikka sijaitsee Naantalissa Livonsaarella osoitteessa:\nVelkuantie 987, 21180 Livonsaari",
+    "main.info": "Info",
+    "main.info.location": "Juhlapaikka",
+    "main.info.location.desc": "Juhlapaikka sijaitsee Naantalissa Livonsaarella osoitteessa:\nVelkuantie 987, 21180 Livonsaari",
+
+    "main.info.dresscode": "Pukukoodi",
+    "main.info.dresscode.desc": "Saaristohäät",
 
     "main.info.accomodation": "Majoitus",
     

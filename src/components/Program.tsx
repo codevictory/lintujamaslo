@@ -7,9 +7,14 @@ export const Program = () => {
       <h1>
         <FormattedMessage id='main.program' />
       </h1>
-      <h2>
-        <FormattedMessage id='main.toBeDecided' />
-      </h2>
+      <h2>12:00</h2>
+      <p>
+        <FormattedMessage id='main.program.consecration' />
+      </p>
+
+      <p className='subText'>
+        <FormattedMessage id='main.program.beingUpdated' />
+      </p>
     </section>
   );
 };

@@ -1,12 +1,19 @@
 export const main: Record<string, string> = {
     "main.program": "Program",
+    "main.program.consecration": "Consecration ceremony",
+    "main.program.beingUpdated": "To be updated...",
+
     "main.menu": "Menu",
-    "main.info": "Info",
+
     "main.saveTheLink": "Save the link",
     "main.welcome": "Tervetuloa! Welcome! Vitajte!",
-    "main.toBeDecided": "To be specified",
 
-    "main.info.seurantalo": "Wedding is located in Naantali on Livonsaari.\nVelkuantie 987, 21180 Livonsaari",
+    "main.info": "Info",
+    "main.info.location": "Location",
+    "main.info.location.desc": "Wedding is located in Naantali on Livonsaari.\nVelkuantie 987, 21180 Livonsaari",
+
+    "main.info.dresscode": "Dress code",
+    "main.info.dresscode.desc": "Archipelago wedding",
 
     "main.info.accomodation": "Accomodation",
     
