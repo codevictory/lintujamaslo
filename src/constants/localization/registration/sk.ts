@@ -5,7 +5,7 @@ export const registration: Record<string, string> = {
     "registration.questions": "Ak máš otázku o:\n\ntom ako sa ku nám dostať\nubytovaní\nniečom inom\n\n napíš nám email veikko@lintujarvi.fi alebo maslakova.iveta@gmail.com",
     "registration.about": "Program a menu budeme aktualizovať",
     "registration.saveTheLink": "( Ulož si odkaz )",
-    "registration.fillInBefore": "Vyplň nám info o sebe a spolusvadbujúcich do konca apríla, prosím.",
+    "registration.fillInBefore": "Vyplň nám info o sebe a spolusvadbujúcich do konca júna, prosím.",
     "registration.addVisitor": "Pridať osobu",
 
     "registration.form.submit": "Odoslať",

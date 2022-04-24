@@ -5,7 +5,7 @@ export const registration: Record<string, string> = {
     "registration.questions": "Jos sinulla on mitään kysymyksiä:\n\nAjo-ohjeista\nmajoituksesta\nmistä tahansa muusta\n\nlaitathan mailia veikko@lintujarvi.fi tai maslakova.iveta@gmail.com",
     "registration.about": "Päivitämme menua ja ohjelmaa osoitteeseen",
     "registration.saveTheLink": "( Laita linkki talteen )",
-    "registration.fillInBefore": "Lisääthän teiltä osallistuvat henkilöt huhtikuun loppuun mennessä",
+    "registration.fillInBefore": "Lisääthän teiltä osallistuvat henkilöt kesäkuun loppuun mennessä",
     "registration.addVisitor": "Lisää osallistuja",
 
     "registration.form.submit": "Vahvista",

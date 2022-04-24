@@ -5,7 +5,7 @@ export const registration: Record<string, string> = {
     "registration.questions": "If you have any question about:\n\ndirections\naccomodation\nwhatever else\n\ncontact us on emails veikko@lintujarvi.fi or maslakova.iveta@gmail.com",
     "registration.about": "We will be updating the program and menu in",
     "registration.saveTheLink": "( Save the link )",
-    "registration.fillInBefore": "Please fill the visitors until the end of April",
+    "registration.fillInBefore": "Please fill the visitors until the end of June",
     "registration.addVisitor": "Add visitor",
 
     "registration.form.submit": "Submit",
