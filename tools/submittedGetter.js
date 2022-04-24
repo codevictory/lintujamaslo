@@ -15,31 +15,21 @@ const firebaseConfig = {
   messagingSenderId: '110340750803',
   appId: '1:110340750803:web:89f5187720e77fc2788326',
 };
+
 try {
   initializeApp(firebaseConfig);
 
   const db = getFirestore();
 
-  getDocs(query(collection(db, 'visitors'))).then((docs) => {
-    const titleRow = 'Nimi;Kutsu;Malja;Valio;Allergiat\n';
-    fs.writeFile('visitors.csv', titleRow, function (err) {
+  getDocs(query(collection(db, 'submitted'))).then((docs) => {
+    const titleRow = 'Kutsu\n';
+    fs.writeFile('submitted.csv', titleRow, function (err) {
       if (err) return console.log(err);
       console.log('STARTED');
     });
     docs.forEach((doc) => {
-      const data = doc.data();
-      const row =
-        doc.id +
-        ';' +
-        data.invitationId +
-        ';' +
-        data.welcomeDrink +
-        ';' +
-        data.preferences +
-        ';' +
-        data.allergies +
-        '\n';
-      fs.appendFile('visitors.csv', row, function (err) {
+      const row = doc.id + '\n';
+      fs.appendFile('submitted.csv', row, function (err) {
         if (err) return console.log(err);
       });
     });
