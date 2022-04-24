@@ -2,6 +2,7 @@ export const main: Record<string, string> = {
     "main.program": "Ohjelma",
     "main.program.consecration": "Vihkiminen",
     "main.program.beingUpdated": "Päivittyy...",
+    "main.program.consert": "Tanssimusiikkia: Juudas Iskariotin Suudelma",
 
     "main.menu": "Menu",
     

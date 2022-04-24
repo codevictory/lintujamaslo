@@ -2,6 +2,7 @@ export const main: Record<string, string> = {
     "main.program": "Program",
     "main.program.consecration": "Consecration ceremony",
     "main.program.beingUpdated": "To be updated...",
+    "main.program.consert": "Dance music by Juudas Iskariotin Suudelma",
 
     "main.menu": "Menu",
 

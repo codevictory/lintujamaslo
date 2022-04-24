@@ -11,6 +11,10 @@ export const Program = () => {
       <p>
         <FormattedMessage id='main.program.consecration' />
       </p>
+      <h2>21:00</h2>
+      <p>
+        <FormattedMessage id='main.program.consert' />
+      </p>
 
       <p className='subText'>
         <FormattedMessage id='main.program.beingUpdated' />
