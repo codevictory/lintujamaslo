@@ -14,7 +14,10 @@ export const main: Record<string, string> = {
     "main.info.location.desc": "Wedding is located in Naantali on Livonsaari.\nVelkuantie 987, 21180 Livonsaari",
 
     "main.info.dresscode": "Dress code",
-    "main.info.dresscode.desc": "Archipelago wedding",
+    "main.info.dresscode.desc": "Countryside wedding with archipelago twist",
+
+    "main.info.gifts": "Gift suggestions",
+    "main.info.gifts.desc": "Best gift for us is your presence... but boost to our traveling and house renovation budget would be welcomed.",
 
     "main.info.accomodation": "Accomodation",
     

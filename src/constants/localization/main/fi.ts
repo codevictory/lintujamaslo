@@ -14,7 +14,10 @@ export const main: Record<string, string> = {
     "main.info.location.desc": "Juhlapaikka sijaitsee Naantalissa Livonsaarella osoitteessa:\nVelkuantie 987, 21180 Livonsaari",
 
     "main.info.dresscode": "Pukukoodi",
-    "main.info.dresscode.desc": "Saaristohäät",
+    "main.info.dresscode.desc": "Maalaishäät saaristoteemalla",
+
+    "main.info.gifts": "Lahjatoive",
+    "main.info.gifts.desc": "Tärkeintä on tietenkin, että pääset paikalle, mutta lisä talonremontointi- ja matkailubudjettiimme on toki aina tervetullutta.",
 
     "main.info.accomodation": "Majoitus",
     

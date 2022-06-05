@@ -13,29 +13,30 @@ export const Info = () => {
         <h1>
           <FormattedMessage id='main.info' />
         </h1>
-
-        <h2>
+        <h2 id='location'>
           <FormattedMessage id='main.info.location' />
         </h2>
         <p>
           <FormattedMessage id='main.info.location.desc' />
         </p>
-
         <div className='Info-imageContainer'>
           <img src={seurantalo} alt='seurantalo' />
         </div>
-
-        <h2>
+        <h2 id='dresscode'>
           <FormattedMessage id='main.info.dresscode' />
         </h2>
         <p>
           <FormattedMessage id='main.info.dresscode.desc' />
         </p>
-
-        <h2>
+        <h2 id='gifts'>
+          <FormattedMessage id='main.info.gifts' />
+        </h2>
+        <p>
+          <FormattedMessage id='main.info.gifts.desc' />
+        </p>
+        <h2 id='accomodation'>
           <FormattedMessage id='main.info.accomodation' />
         </h2>
-
         <a href='https://oldsmuggler.fi/palvelut/mokit/'>
           <h3>
             <FormattedMessage id='main.info.vanhaSalakuljettaja' />
@@ -47,7 +48,6 @@ export const Info = () => {
         <p>
           <FormattedMessage id='main.info.vanhaSalakuljettaja.desc' />
         </p>
-
         <a href='https://vaihela.fi/'>
           <h3>
             <FormattedMessage id='main.info.vaihela' />
@@ -59,7 +59,6 @@ export const Info = () => {
         <p>
           <FormattedMessage id='main.info.vaihela.desc' />
         </p>
-
         <a href='https://www.livonsaarencaravan.fi/mokit'>
           <h3>
             <FormattedMessage id='main.info.livonsaariCaravan' />
@@ -71,8 +70,7 @@ export const Info = () => {
         <p>
           <FormattedMessage id='main.info.livonsaariCaravan.desc' />
         </p>
-
-        <h2>
+        <h2 id='services'>
           <FormattedMessage id='main.info.services' />
         </h2>
         <a href='https://livonsaarenosuuskauppa.fi/'>

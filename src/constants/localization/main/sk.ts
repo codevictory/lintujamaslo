@@ -10,11 +10,14 @@ export const main: Record<string, string> = {
     "main.welcome": "Tervetuloa! Welcome! Vitajte!",
 
     "main.info": "Info",
-    "main.info.location": "Location",
+    "main.info.location": "Miesto",
     "main.info.location.desc": "Svadba sa koná vo Fínsku v Livonsaari.\nVelkuantie 987, 21180 Livonsaari",
 
     "main.info.dresscode": "Dress code",
-    "main.info.dresscode.desc": "Archipelago wedding",
+    "main.info.dresscode.desc": "Countryside wedding with archipelago twist",
+
+    "main.info.gifts": "Tip na darček",
+    "main.info.gifts.desc": "Najviac nás poteší Vaša prítomnosť, uvítame však aj podporu rozpočtu na cestovanie a renováciu domu.",
 
     "main.info.accomodation": "Ubytovanie",
     
