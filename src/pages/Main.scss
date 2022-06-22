@@ -44,6 +44,22 @@
         font-size: 3.2rem;
       }
     }
+
+    .Landing-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .Landing-picture {
+        border-radius: 5%;
+        width: 60%;
+      }
+
+      i {
+        font-size: 1.2rem;
+        margin-bottom: 2em;
+      }
+    }
   }
 
   p {

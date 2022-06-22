@@ -64,7 +64,13 @@ export const Main = () => {
             )}
           </article>
         ) : (
-          <article>
+          <article className='Landing-container'>
+            <img
+              src='landing.jpg'
+              className='Landing-picture'
+              alt='Main picture'
+            />
+            <i>Straník, Žilina, Slovakia</i>
             <DateAndPlace size='large' />
           </article>
         )}
