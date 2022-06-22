@@ -65,11 +65,7 @@ export const Main = () => {
           </article>
         ) : (
           <article className='Landing-container'>
-            <img
-              src='landing.jpg'
-              className='Landing-picture'
-              alt='Main picture'
-            />
+            <img src='landing.jpg' className='Landing-picture' alt='Landing' />
             <i>Straník, Žilina, Slovakia</i>
             <DateAndPlace size='large' />
           </article>
