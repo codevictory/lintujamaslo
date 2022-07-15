@@ -34,6 +34,7 @@ export const Info = () => {
         <p>
           <FormattedMessage id='main.info.gifts.desc' />
         </p>
+        <p>IBAN: FI59 5316 0820 0613 54</p>
         <h2 id='accomodation'>
           <FormattedMessage id='main.info.accomodation' />
         </h2>
