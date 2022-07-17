@@ -18,7 +18,7 @@ export const main: Record<string, string> = {
 
     "main.info.gifts": "Gift suggestions",
     "main.info.gifts.desc": "Best gift for us is your presence... but boost to our traveling and house renovation budget would be welcomed.",
-    "main.info.gifts.iban": "FI59 5316 0820 0613 54",
+    "main.info.gifts.iban": "IBAN: FI59 5316 0820 0613 54",
 
     "main.info.accomodation": "Accomodation",
 

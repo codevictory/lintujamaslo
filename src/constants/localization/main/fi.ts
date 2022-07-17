@@ -18,7 +18,7 @@ export const main: Record<string, string> = {
 
     "main.info.gifts": "Lahjatoive",
     "main.info.gifts.desc": "Tärkeintä on tietenkin, että pääset paikalle, mutta lisä talonremontointi- ja matkailubudjettiimme on toki aina tervetullutta.",
-    "main.info.gifts.iban": "FI59 5316 0820 0613 54",
+    "main.info.gifts.iban": "IBAN: FI59 5316 0820 0613 54",
 
     "main.info.accomodation": "Majoitus",
 
