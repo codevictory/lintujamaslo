@@ -18,18 +18,19 @@ export const main: Record<string, string> = {
 
     "main.info.gifts": "Gift suggestions",
     "main.info.gifts.desc": "Best gift for us is your presence... but boost to our traveling and house renovation budget would be welcomed.",
+    "main.info.gifts.iban": "FI59 5316 0820 0613 54",
 
     "main.info.accomodation": "Accomodation",
-    
+
     "main.info.vanhaSalakuljettaja": "Old Smuggler",
     "main.info.vanhaSalakuljettaja.desc": "Old Smugglerr offers cabin to rent approximately 7km from the wedding place.",
-    
+
     "main.info.vaihela": "Saaristo Hotelli Vaihela",
     "main.info.vaihela.desc": "On excellent location. Expensive but idyllic. Behind two ferries that goes during day time every half hour, during the night you need to order it by phone.",
-    
+
     "main.info.livonsaariCaravan": "Livonsaari Caravan",
     "main.info.livonsaariCaravan.desc": "Nearest to the wedding place (approx 4km). Simple and functional",
-    
+
     "main.info.livonsaarenOsuuskauppa": "Livonsaaren Osuuskauppa",
     "main.info.livonsaarenOsuuskauppa.desc": "Best village shop ever! Right on the other side of the road from the wedding place. Here you can find grocery, restaurant and a bar.",
 
