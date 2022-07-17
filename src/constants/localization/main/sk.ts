@@ -1,6 +1,8 @@
 export const main: Record<string, string> = {
     "main.program": "Program",
-    "main.program.consecration": "Consecration ceremony",
+    "main.program.consecration": "Sobáš",
+    "main.program.lunch": "Obed",
+    "main.program.coffee": "Kávička, koláče a torta. Príhovory",
     "main.program.beingUpdated": "To be updated...",
     "main.program.consert": "Do tanca nam bude hrat kapela Juudas Iskariotin Suudelma",
 
