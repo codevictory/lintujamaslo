@@ -10,16 +10,45 @@ root/directory$ npm install && npm start
 
 ## Firestore setup
 
-To be added...
+You need tree collections. `invited`, `submitted` and `visitors`.
+
+Rules:
+```
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /visitors/{visitor} {
+      allow create: if exists(/databases/$(database)/documents/invited/$(request.resource.data.invitationId))
+      	&& !exists(/databases/$(database)/documents/submitted/$(request.resource.data.invitationId));
+    }
+    // Uncomment when fetching data with scripts under /tools
+    //
+    // match /visitors/{visitor} {
+    // 	allow read: if true;
+    // }
+    // match /submitted/{submitted} {
+    // 	allow read: if true;
+    // }
+    // match /invited/{invited} {
+    // 	allow read: if true;
+    // }
+    match /submitted/{submitted} {
+      allow create: if exists(/databases/$(database)/documents/invited/$(request.resource.id))
+    }
+  }
+}
+```
+
+***It's important to remember to comment right after script is run. While uncommented all your data is available to public internet!***
 
 ## Deployment
 
-Via GitHub actions and Firebase hosting.
+I recommend installing [Firebase CLI](https://firebaseopensource.com/projects/firebase/firebase-tools/) to automate the setup.
 
-Setup to be specified.
+For manual configuration see `/.github/workflows`. You need to add following secrets:
+- GITHUB_TOKEN
+- FIREBASE_SERVICE_ACCOUNT_LINTUJAMASLO
 
-## About usage
+Further reading: https://firebase.google.com/docs/hosting/github-integration
+## Usage
 
-Feel free to fork, use and change this at will. 
-
-Please mention this repo in footer or something. Clearer instructions to be specified.
+Feel free to fork, use and change at will. Hope this repo will help and inspire you!
