@@ -8,12 +8,13 @@ const {
 const fs = require('fs');
 
 const firebaseConfig = {
-  apiKey: 'AIzaSyBcE9X0ueyczUqpjm0bK9UDrzvDmB96pr4',
-  authDomain: 'lintujamaslo.firebaseapp.com',
-  projectId: 'lintujamaslo',
-  storageBucket: 'lintujamaslo.appspot.com',
-  messagingSenderId: '110340750803',
-  appId: '1:110340750803:web:89f5187720e77fc2788326',
+  apiKey: "AIzaSyAQx4TnM3XIf-Mp_XUp1pN-Hsf0AKKe-eo",
+  authDomain: "tomika-f62a1.firebaseapp.com",
+  projectId: "tomika-f62a1",
+  storageBucket: "tomika-f62a1.appspot.com",
+  messagingSenderId: "215561604477",
+  appId: "1:215561604477:web:a6bc047d86687f41205014",
+  measurementId: "G-EL7E921FV1"
 };
 
 try {
