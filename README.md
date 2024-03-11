@@ -52,3 +52,18 @@ Further reading: https://firebase.google.com/docs/hosting/github-integration
 ## Usage
 
 Feel free to fork, use and change at will. Hope this repo will help and inspire you!
+
+## Deving
+
+npm install
+
+npm start
+
+npm audit fix --force
+
+now npm start works
+
+created firebase project https://console.firebase.google.com/project/tomika-f62a1/overview
+
+
+
